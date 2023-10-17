@@ -1,0 +1,72 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Excon", sans-serif;
+}
+
+body {
+  background-color: rgba(103, 225, 255, 0.575);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body form {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30vw;
+  height: 70vh;
+  background-color: rgba(172, 172, 172, 0.616);
+  border-radius: 10px;
+  box-shadow: 2px 0px 10px 2px rgba(80, 80, 80, 0.575);
+}
+body form .cont_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body form .cont_back a {
+  position: relative;
+  left: -25%;
+  text-decoration: none;
+}
+body form .cont_back a span {
+  color: black;
+}
+body form h1 {
+  color: rgb(34, 34, 34);
+  border-bottom: 3px solid rgb(34, 34, 34);
+}
+body form input {
+  color: rgb(31, 31, 31);
+  border: none;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid rgb(34, 34, 34);
+  width: 70%;
+}
+body form input::-moz-placeholder {
+  color: rgb(34, 34, 34);
+}
+body form input::placeholder {
+  color: rgb(34, 34, 34);
+}
+body form .selec {
+  width: 70%;
+  text-align: center;
+  background-color: rgb(204, 204, 204);
+  height: 40px;
+  box-shadow: 2px 0px 10px 2px rgba(80, 80, 80, 0.575);
+}
+body form button {
+  border-radius: 20px;
+  width: 40%;
+  height: 8%;
+  border: none;
+  box-shadow: 2px 0px 10px 2px rgba(80, 80, 80, 0.575);
+}/*# sourceMappingURL=estilo.css.map */
