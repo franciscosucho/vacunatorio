@@ -96,15 +96,26 @@
                     echo ("<h4>Pres. Hipólito Yrigoyen 1757, Florida</h4>");
                     echo ("<h4>Días y horarios:Lunes a viernes de 7.30 a 16.45hs y sábados de 8 a 14 hs.</h4>");
                 }
-                if ($localidad == "Villa Adelina" || $localidad == "Carapachay") {
+                
+                if ($localidad == "Carapachay") {
                     echo ("<h3>tendra que ir a URI BURMAN</h3>");
                     echo ("<h4> Ituzaingó 5725,Carapachay </h4>");
                     echo ("<h4>Días y horarios: Lunes a sábados de 8 a 18 hs</h4>");
                 }
-                if ($localidad == "Munro" || $localidad == "Olivos") {
+                if ($localidad == "Villa Adelina") {
+                    echo ("<h3>tendra que ir a CAPS SCALISE </h3>");
+                    echo ("<h4> Cajaraville 4042 Villa Adelina</h4>");
+                    echo ("<h4>Días y horarios: Lunes a viernes de 8 a 12 hs y de 13 a 15 hs</h4>");
+                }
+                if ($localidad == "Munro") {
                     echo ("<h3>tendra que ir a CAPS BARREIRO AGUIRRE</h3>");
                     echo ("<h4> Sargento Baigorria 2461,Munro </h4>");
                     echo ("<h4>Días y horarios: Lunes a viernes de 8:00 a 15:00 hs</h4>");
+                }
+                if ($localidad == "Olivos") {
+                    echo ("<h3>CAPS ILLÍA </h3>");
+                    echo ("<h4> San Lorenzo 3522,Olivos </h4>");
+                    echo ("<h4>Días y horarios: Lunes, martes, miércoles y viernes de 8:30 a 15:00 hs y jueves de 8:0030 hs a 13:30 hs</h4>");
                 }
             }
             ?>

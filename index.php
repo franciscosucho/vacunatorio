@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacunatorio</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="shortcut icon" href="https://citymis.co/custom/vicentelopez/public/_css/logo150x550.png" type="image/x-icon">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.vicentelopez.gov.ar/apple-touch-icon.png">
 </head>
 
 <body>
@@ -23,9 +24,6 @@
                 <li class="ver_horarios">Horarios de Vacunacion</li>
         </div>
 
-
-
-
         <div class="cont_vic">
             <h3>Vicente lopez</h3>
         </div>
@@ -37,6 +35,7 @@
 
         <section class="sec_vacunas">
             <h3 class="text_vacunas">Tipos De vacuna</h3>
+            
             <?php
 
             // Haciendo la conexión a la base de datos y pidiendo las canciones
@@ -93,15 +92,13 @@
             }
 
             echo ('</div> ');
-
-
-
 
             ?>
 
         </section>
         <section class="sec_info">
             <h3>Informacion sobre las vacunas</h3>
+            
             <?php
 
             // Haciendo la conexión a la base de datos y pidiendo las canciones
@@ -162,7 +159,8 @@
 
             echo ('</div> ');
             ?>
-        </section>
+        
+    </section>
         <section class="sec_img">
             <h3>Ubicaciones de los vacunatorios.</h3>
             <img src="vacunatorio.png" alt="Ubicaciones de vacunatorios">
@@ -170,6 +168,7 @@
         </section>
         <section class="sec_horarios">
             <h3>Horarios de Vacunacion.</h3>
+            
             <?php
             // Haciendo la conexión a la base de datos y pidiendo las canciones
             $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
@@ -188,6 +187,7 @@
             }
             echo ('</div> ');
             ?>
+
         </section>
     </main>
     <footer>
@@ -195,8 +195,5 @@
     </footer>
     <script src="index.js"></script>
 </body>
-
-
-
 
 </html>
