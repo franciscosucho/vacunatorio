@@ -33,7 +33,7 @@ ver_img.addEventListener("click", () => {
     main.style.height="200vh"
 })
 ver_horarios.addEventListener("click", () => {
-    main.style.height="300vh"
+    main.style.height="310vh"
     sec_horarios.classList.toggle("active")
     sec_img.classList.remove('active')
     sec_vacunas.classList.remove("active")

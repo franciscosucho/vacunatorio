@@ -80,6 +80,10 @@ body main {
   align-items: center;
   height: 100vh;
 }
+body main h4 {
+  font-size: 1.5em;
+  color: rgb(233, 231, 231);
+}
 body main img {
   border-radius: 20px;
 }
@@ -92,8 +96,8 @@ body main a {
   cursor: pointer;
   background-color: rgb(6, 147, 192);
   margin-top: 10px;
-  width: 15%;
-  height: 6%;
+  width: 260px;
+  height: 70px;
   border-radius: 20px;
   border: none;
   box-shadow: 2px 1px 15px 10px rgb(136, 170, 182);
@@ -121,6 +125,8 @@ body main .sec_vacunas h3 {
   font-size: 2em;
 }
 body main .sec_vacunas .cont_info {
+  transition: all 0.2s;
+  cursor: pointer;
   padding-top: 10px;
   background-color: rgba(105, 169, 201, 0.534);
   border-radius: 30px;
@@ -130,6 +136,10 @@ body main .sec_vacunas .cont_info {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+body main .sec_vacunas .cont_info:hover {
+  transform: scale(1.1);
+  background-color: rgba(84, 135, 161, 0.534);
 }
 body main .sec_vacunas .cont_info .articulo {
   color: white;
@@ -158,6 +168,8 @@ body main .sec_info h3 {
   font-size: 2em;
 }
 body main .sec_info .cont_info {
+  transition: all 0.2s;
+  cursor: pointer;
   padding-top: 10px;
   background-color: rgba(38, 63, 172, 0.534);
   border-radius: 30px;
@@ -167,6 +179,10 @@ body main .sec_info .cont_info {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+body main .sec_info .cont_info:hover {
+  background-color: rgba(30, 50, 136, 0.534);
+  transform: scale(1.1);
 }
 body main .sec_info .cont_info .articulo {
   color: white;
@@ -184,6 +200,8 @@ body main .sec_img {
   width: 60%;
   height: 30%;
   display: none;
+  transition: all 0.2s;
+  cursor: pointer;
   background-color: rgba(38, 63, 172, 0.356);
 }
 body main .sec_img.active {
@@ -226,6 +244,8 @@ body main .sec_horarios .cont_info {
   flex-direction: column;
 }
 body main .sec_horarios .cont_info .articulo {
+  transition: all 0.2s;
+  cursor: pointer;
   border-radius: 20px;
   background-color: rgba(126, 105, 201, 0.644);
   color: white;
@@ -238,6 +258,10 @@ body main .sec_horarios .cont_info .articulo {
   padding: 20px;
   margin: 5px;
   width: 80%;
+}
+body main .sec_horarios .cont_info .articulo:hover {
+  background-color: rgba(99, 82, 160, 0.644);
+  transform: scale(1.1);
 }
 
 footer {

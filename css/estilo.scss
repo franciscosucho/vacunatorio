@@ -80,6 +80,10 @@ body {
     }
 
     main {
+        h4{
+            font-size: 1.5em;
+            color: rgb(233, 231, 231);
+        }
         padding-top: 30px;
         padding-bottom: 100px;
         background-color: rgb(209, 209, 209);
@@ -103,8 +107,8 @@ body {
             cursor: pointer;
             background-color: rgb(6, 147, 192);
             margin-top: 10px;
-            width: 15%;
-            height: 6%;
+            width: 260px;
+            height: 70px;
             border-radius: 20px;
             border: none;
             box-shadow: 2px 1px 15px 10px rgb(136, 170, 182);
@@ -137,6 +141,8 @@ body {
             }
 
             .cont_info {
+                transition: all .2s;
+                cursor: pointer;
                 padding-top: 10px;
                 background-color: rgba(105, 169, 201, 0.534);
                 border-radius: 30px;
@@ -146,7 +152,11 @@ body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-
+                
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: rgba(84, 135, 161, 0.534);
+                }
 
                 .articulo {
                     color: white;
@@ -182,6 +192,8 @@ body {
             }
 
             .cont_info {
+                transition: all .2s;
+                cursor: pointer;
                 padding-top: 10px;
                 background-color: rgba(38, 63, 172, 0.534);
                 border-radius: 30px;
@@ -192,6 +204,10 @@ body {
                 align-items: center;
                 flex-direction: column;
 
+                &:hover {
+                    background-color: rgba(30, 50, 136, 0.534);
+                    transform: scale(1.1);
+                }
 
                 .articulo {
                     color: white;
@@ -221,6 +237,8 @@ body {
                 flex-direction: column;
             }
 
+            transition: all .2s;
+            cursor: pointer;
             background-color: rgba(38, 63, 172, 0.356);
 
             h3 {
@@ -264,8 +282,9 @@ body {
                 align-items: center;
                 flex-direction: column;
 
-
                 .articulo {
+                    transition: all .2s;
+                    cursor: pointer;
                     border-radius: 20px;
                     background-color: rgba(126, 105, 201, 0.644);
                     color: white;
@@ -278,6 +297,11 @@ body {
                     padding: 20px;
                     margin: 5px;
                     width: 80%;
+                    
+                    &:hover {
+                        background-color: rgba(99, 82, 160, 0.644);
+                        transform: scale(1.1);
+                    }
                 }
             }
         }

@@ -36,7 +36,7 @@
 
 
         <section class="sec_vacunas">
-            <h3 class="text_vacunas">Calendario de vacunas</h3>
+            <h3 class="text_vacunas">Tipos De vacuna</h3>
             <?php
 
             // Haciendo la conexión a la base de datos y pidiendo las canciones
@@ -111,7 +111,6 @@
             echo ('<div class="cont_info">');
 
             $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4>  ' . $vacuna['dirigido_para'] . '</h4>');
             while ($vacuna = mysqli_fetch_array($resultInvent)) {
                 echo ('<div class="articulo">');
                 echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
@@ -181,7 +180,7 @@
             $vacuna = mysqli_fetch_array($resultInvent);
             while ($vacuna = mysqli_fetch_array($resultInvent)) {
                 echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Clinica: ' . $vacuna['nombre'] . '</p>');
+                echo ('<h4 class="vacuna-name"> Clinica: ' . $vacuna['nombre'] . '</h4>');
                 echo ('<p class="vacuna-name"> Direccion: ' . $vacuna['direccion'] . '</p>');
                 echo ('<p class="vacuna-name"> Telefono: ' . $vacuna['telefono'] . '</p>');
                 echo ('<p class="vacuna-name"> Horario de Atencion: ' . $vacuna['horario_atencion'] . '</p>');
