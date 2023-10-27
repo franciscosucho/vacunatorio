@@ -26,6 +26,7 @@
             </div>
 
             <input type="text" placeholder="Nombre y apellido" name="nombre" class="enviar">
+            <input type="text" placeholder="Dni" name="dni" class="enviar">
             <input type="text" class="solicitud" placeholder="solicitud" name="solicitud">
             <input type="text" placeholder="Telefono" name="telefono">
             <input type="text" placeholder="Correo electronico" name="email">
@@ -51,22 +52,22 @@
             // Verifica si el formulario se ha enviado
             if (isset($_POST['btn'])) {
                 $nombre = $_POST['nombre'];
+                $dni = $_POST['dni'];
                 $email = $_POST['email'];
                 $solicitud = $_POST['solicitud'];
                 $localidad = $_POST['localidad'];
                 $telefono = $_POST['telefono'];
-
                 // Verifica que todos los campos estén completos
-                if (empty($nombre) || empty($email) || empty($solicitud) || empty($localidad) || empty($telefono)) {
+                if (empty($nombre) || empty($dni) || empty($email) || empty($solicitud) || empty($localidad) || empty($telefono)) {
                     $mensaje = "Por favor, complete todos los campos.";
                 } else {
                     // Sentencia preparada para la inserción
-                    $sql = "INSERT INTO solicitud_turno (nombre, localidad, descripcion, telefono, correo) VALUES (?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO solicitud_turno (nombre , localidad , descripcion, telefono, correo,dni ) VALUES (?,?,?, ?, ?, ?)";
                     $stmt = $conexionDatos->prepare($sql);
 
                     if ($stmt) {
                         // Vincula los parámetros y ejecuta la consulta
-                        $stmt->bind_param("sssss", $nombre, $localidad, $solicitud, $telefono, $email);
+                        $stmt->bind_param("ssssss", $nombre,$localidad, $solicitud, $telefono, $email,$dni);
                         if ($stmt->execute()) {
                             $mensaje = "Datos insertados correctamente";
                         } else {

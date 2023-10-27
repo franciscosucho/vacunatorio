@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="shortcut icon" href="https://citymis.co/custom/vicentelopez/public/_css/logo150x550.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.vicentelopez.gov.ar/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -22,11 +23,14 @@
                 <li class="ver_vacunas">Tipos de vacunas</li>
                 <li class="ver_img">Ubicaciones de vacuatorios</li>
                 <li class="ver_horarios">Horarios de Vacunacion</li>
+            </ul>
+            <span class="material-symbols-outlined">person</span>
         </div>
 
         <div class="cont_vic">
             <h3>Vicente lopez</h3>
         </div>
+
     </header>
     <main class="main">
         <img src="https://www.vicentelopez.gov.ar/contenido/2023-01-18-961-imagen.jpg" alt="">

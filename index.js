@@ -14,7 +14,7 @@ ver_vacunas.addEventListener("click", () => {
     sec_info.classList.remove("active")
     sec_img.classList.remove('active')
     sec_horarios.classList.remove("active")
-    main.style.height="200vh"
+    
 })
 
 ver_info.addEventListener("click", () => {
@@ -22,7 +22,7 @@ ver_info.addEventListener("click", () => {
     sec_vacunas.classList.remove("active")
     sec_img.classList.remove('active')
     sec_horarios.classList.remove("active")
-    main.style.height="200vh"
+    
 })
 
 ver_img.addEventListener("click", () => {
@@ -30,10 +30,10 @@ ver_img.addEventListener("click", () => {
     sec_vacunas.classList.remove("active")
     sec_info.classList.remove('active');
     sec_horarios.classList.remove("active")
-    main.style.height="200vh"
+    
 })
 ver_horarios.addEventListener("click", () => {
-    main.style.height="310vh"
+
     sec_horarios.classList.toggle("active")
     sec_img.classList.remove('active')
     sec_vacunas.classList.remove("active")
