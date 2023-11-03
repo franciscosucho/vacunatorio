@@ -56,9 +56,6 @@ body main form input {
 body main form input::-moz-placeholder {
   color: rgb(34, 34, 34);
 }
-body main form input:-ms-input-placeholder {
-  color: rgb(34, 34, 34);
-}
 body main form input::placeholder {
   color: rgb(34, 34, 34);
 }
