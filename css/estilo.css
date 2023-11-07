@@ -6,12 +6,11 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
-  height: 100%;
+  background-color: rgb(206, 205, 205);
 }
 body header {
   padding-top: 5vh;
-  background-color: rgb(24, 50, 56);
+  background-color: rgb(8, 147, 194);
   width: 100%;
   height: 15vh;
   display: flex;
@@ -37,6 +36,64 @@ body header .cont_he h1 {
   padding-top: 50px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+}
+body header .cont_he .icon {
+  top: -50%;
+  cursor: pointer;
+  position: relative;
+  left: 110%;
+  color: white;
+}
+body header .cont_he .cont_menu {
+  z-index: 10000000;
+  position: absolute;
+  padding-top: 50px;
+  width: 30%;
+  height: 100vh;
+  top: 0%;
+  left: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transform: translate(1000px);
+  background-color: rgb(16, 112, 145);
+  transition: all 0.3s ease-out;
+}
+body header .cont_he .cont_menu.active {
+  transform: translate(0px);
+}
+body header .cont_he .cont_menu h3 {
+  font-size: 2em;
+  color: white;
+}
+body header .cont_he .cont_menu .icon {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  background-color: rgb(10, 84, 109);
+  border-radius: 3px;
+  color: white;
+  padding: 3px;
+}
+body header .cont_he .cont_menu .cont_obj {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  gap: 5px;
+  width: 40%;
+  transition: all 0.2s ease-in-out;
+}
+body header .cont_he .cont_menu .cont_obj a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+}
+body header .cont_he .cont_menu .cont_obj:hover {
+  box-shadow: 0 2px rgb(255, 255, 255);
 }
 body header .cont_he ul {
   padding-top: 30px;
@@ -81,11 +138,19 @@ body main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 30px;
   height: 100%;
 }
 body main h4 {
   font-size: 1.5em;
   color: rgb(233, 231, 231);
+}
+body main .texto_main {
+  font-size: 2.5em;
+  color: rgb(80, 177, 209);
+  border-radius: 10px;
+  border: 3px solid rgb(80, 177, 209);
+  padding: 20px;
 }
 body main img {
   height: 50%;
@@ -270,6 +335,7 @@ body main .sec_horarios .cont_info .articulo:hover {
 }
 
 footer {
+  z-index: 100;
   position: fixed;
   height: 4%;
   width: 95%;

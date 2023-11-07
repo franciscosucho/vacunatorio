@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    
-<meta charset="UTF-8">
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacunatorio</title>
     <link rel="stylesheet" href="css/estilo.css">
@@ -23,8 +23,39 @@
                 <li class="ver_vacunas">Tipos de vacunas</li>
                 <li class="ver_img">Ubicaciones de vacuatorios</li>
                 <li class="ver_horarios">Horarios de Vacunacion</li>
+                <li class="ver_horarios">Info vacunacion</li>
             </ul>
-            <span class="material-symbols-outlined">person</span>
+            <div class="cont_menu">
+                <h3>Menu de usuario</h3>
+                <div class="cont_obj">
+                    <span class="material-symbols-outlined">
+                        list_alt
+                    </span>
+                    <a>Ver turnos medicos</a>
+                </div>
+
+                <div class="cont_obj">
+                    <span class="material-symbols-outlined">
+                        syringe
+                    </span>
+                    <a href="form.php">Solicitar vacuna</a>
+                </div>
+                <div class="cont_obj">
+                    <span class="material-symbols-outlined">
+                        edit_note
+                    </span>
+                    <a href="form.php">Modificar turno</a>
+                </div>
+
+
+                <span class="material-symbols-outlined icon btn_close">
+                    close
+                </span>
+            </div>
+            <span class="material-symbols-outlined btn_menu icon ">
+                menu
+            </span>
+
         </div>
 
         <div class="cont_vic">
@@ -33,13 +64,16 @@
 
     </header>
     <main class="main">
-        <img src="https://www.vicentelopez.gov.ar/contenido/2023-01-18-961-imagen.jpg" alt="">
-        <a href="form.php">Solicitar turno medico</a>
+        <h2 class="texto_main">Plan Provincial de vacunacion</h2>
 
+        <img src="https://www.vicentelopez.gov.ar/contenido/2023-01-18-961-imagen.jpg" alt="">
+
+        <h5>Que es?</h5>
+        <p>Buenos Aires Vacunate es el <b> Público, Gratuito y Optativo </b> de vacunación contra el coronavirus en la Provincia de Buenos Aires.</p>
 
         <section class="sec_vacunas">
             <h3 class="text_vacunas">Tipos De vacuna</h3>
-            
+
             <?php
 
             // Haciendo la conexión a la base de datos y pidiendo las canciones
@@ -102,7 +136,7 @@
         </section>
         <section class="sec_info">
             <h3>Informacion sobre las vacunas</h3>
-            
+
             <?php
 
             // Haciendo la conexión a la base de datos y pidiendo las canciones
@@ -163,8 +197,8 @@
 
             echo ('</div> ');
             ?>
-        
-    </section>
+
+        </section>
         <section class="sec_img">
             <h3>Ubicaciones de los vacunatorios.</h3>
             <img src="vacunatorio.png" alt="Ubicaciones de vacunatorios">
@@ -172,7 +206,7 @@
         </section>
         <section class="sec_horarios">
             <h3>Horarios de Vacunacion.</h3>
-            
+
             <?php
             // Haciendo la conexión a la base de datos y pidiendo las canciones
             $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
@@ -193,6 +227,7 @@
             ?>
 
         </section>
+        <section class="covid"></section>
     </main>
     <footer>
         <div class="back"></div>
