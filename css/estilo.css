@@ -123,7 +123,7 @@ body header .cont_vic {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(255, 255, 255);
 }
 body header .cont_vic h3 {
   padding: 10px;
@@ -131,9 +131,22 @@ body header .cont_vic h3 {
   color: rgb(18, 204, 195);
 }
 body main {
+  background-color: rgb(255, 255, 255);
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main img {
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+body main .sec_prin {
   padding-top: 20vh;
   padding-bottom: 100px;
-  background-color: rgb(206, 205, 205);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -141,21 +154,58 @@ body main {
   gap: 30px;
   height: 100%;
 }
-body main h4 {
+body main .sec_prin h4 {
   font-size: 1.5em;
   color: rgb(233, 231, 231);
 }
-body main .texto_main {
+body main .sec_prin .texto_main {
   font-size: 2.5em;
-  color: rgb(80, 177, 209);
+  color: rgb(196, 0, 147);
   border-radius: 10px;
-  border: 3px solid rgb(80, 177, 209);
+  border: 3px solid rgb(196, 0, 147);
   padding: 20px;
 }
-body main img {
-  height: 50%;
-  width: 50%;
-  border-radius: 20px;
+body main .sec_prin .text_encabezado {
+  margin-top: 5%;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 3em;
+  background-color: rgb(8, 147, 194);
+  color: white;
+}
+body main .sec_prin .text_p {
+  width: 70%;
+  font-size: 1.3em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 300;
+  color: rgb(32, 32, 32);
+  line-height: 1.2;
+}
+body main .sec_prin .cont_sintomas {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: auto;
+  gap: 10px;
+}
+body main .sec_prin .cont_sintomas .cont_sintoma {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+body main .sec_prin .cont_sintomas .cont_sintoma img {
+  height: auto;
+  width: auto;
+}
+body main .sec_prin .cont_sintomas .cont_sintoma p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: rgb(37, 37, 37);
 }
 body main a {
   transition: transform 0.3s ease-in-out;
@@ -332,6 +382,59 @@ body main .sec_horarios .cont_info .articulo {
 body main .sec_horarios .cont_info .articulo:hover {
   background-color: rgba(99, 82, 160, 0.644);
   transform: scale(1.1);
+}
+body main .sub_footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid rgba(163, 163, 163, 0.562);
+  height: 30vh;
+  background-color: #ffffff;
+}
+body main .sub_footer .cont_img {
+  height: 200px;
+  width: 100%;
+}
+body main .sub_footer .cont_img img {
+  width: 100%;
+  height: 100%;
+}
+body main .sub_footer .cont_telefonos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+}
+body main .sub_footer .cont_telefonos .cont_telefono {
+  cursor: pointer;
+  height: 80%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+  background-color: rgb(6, 147, 192);
+  transition: all 0.2s ease-in-out;
+}
+body main .sub_footer .cont_telefonos .cont_telefono h4 {
+  text-align: center;
+  width: 90%;
+}
+body main .sub_footer .cont_telefonos .cont_telefono h2 {
+  text-align: center;
+  font-size: 2em;
+}
+body main .sub_footer .cont_telefonos .cont_telefono h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+body main .sub_footer .cont_telefonos .cont_telefono:hover {
+  background-color: rgb(19, 129, 165);
 }
 
 footer {

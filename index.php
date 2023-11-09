@@ -38,13 +38,13 @@
                     <span class="material-symbols-outlined">
                         syringe
                     </span>
-                    <a href="form.php">Solicitar vacuna</a>
+                    <a href="form.php?ocultarForm=true">Solicitar vacuna</a>
                 </div>
                 <div class="cont_obj">
                     <span class="material-symbols-outlined">
                         edit_note
                     </span>
-                    <a href="form.php">Modificar turno</a>
+                    <a href="form.php" id="modificar_turno">Modificar turno</a>
                 </div>
 
 
@@ -64,13 +64,62 @@
 
     </header>
     <main class="main">
-        <h2 class="texto_main">Plan Provincial de vacunacion</h2>
 
         <img src="https://www.vicentelopez.gov.ar/contenido/2023-01-18-961-imagen.jpg" alt="">
+        <section class="sec_prin">
 
-        <h5>Que es?</h5>
-        <p>Buenos Aires Vacunate es el <b> Público, Gratuito y Optativo </b> de vacunación contra el coronavirus en la Provincia de Buenos Aires.</p>
+            <h2 class="texto_main">Plan Provincial de vacunacion</h2>
+            <h5 class="text_encabezado">Que es?</h5>
+            <p class="text_p">Buenos Aires Vacunate es el <b> Público, Gratuito y Optativo </b> de vacunación contra el coronavirus en la Provincia de Buenos Aires.</p>
+            <p class="text_p"> Después de 10 meses de comenzar la pandemia, se convirtió en el <b>operativo de vacunación más grande </b>y sin precedentes en la historia bonaerense.</p>
+            <p class="text_p"> Incluye la distribución, organización y vacunación simultánea en los <b> 135 municipios del territorio provincial.</b>
 
+            </p>
+            <h5 class="text_encabezado">¿Cómo te vacunas?</h5>
+            <p class="text_p"><b>La vacuna es libre y federal para todas y todos los bonaerenses, personas de otras jurisdicciones y extranjeras</b>, a partir de los 6 meses de edad, en todos los vacunatorios Covid de La Provincia de Buenos Aires.</p>
+            <p class="text_p">Si querés registrarte podés hacerlo desde la Web ingresando en “ me quiero registrar” o desde la App Vacunate. Ahí vas a poder acceder a tus datos y la constancia de las vacunas recibidas.
+            </p>
+            <h5 class="text_encabezado">Pautas de Alarma</h5>
+            <p class="text_p">La aplicación de cualquier vacuna es un proceso seguro, pero existen algunos efectos que pueden aparecer luego de su colocación.</p>
+            <div class="cont_sintomas">
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_01.png" alt="">
+                    <p>Dolor, picazón, sensibilidad, enrojecimiento o hinchazón en el lugar de aplicación</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_02.png" alt="">
+                    <p>Fiebre</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_03.png" alt="">
+                    <p>Dolor de cabeza</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_04.png" alt="">
+                    <p>Cansancio</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_05.png" alt="">
+                    <p>Escalofríos</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_06.png" alt="">
+                    <p>Pérdida del apetito</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_07.png" alt="">
+                    <p>Dolor muscular</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_08.png" alt="">
+                    <p>Dolor en las articulaciones</p>
+                </div>
+                <div class="cont_sintoma">
+                    <img src="img/iconos_sintomas_09.png" alt="">
+                    <p>Sudoración</p>
+                </div>
+            </div>
+        </section>
         <section class="sec_vacunas">
             <h3 class="text_vacunas">Tipos De vacuna</h3>
 
@@ -228,6 +277,30 @@
 
         </section>
         <section class="covid"></section>
+        <section class="sub_footer">
+
+
+            <div class="cont_telefonos">
+                <div class="cont_telefono">
+                    <h4>ATENCIÓN TELEFÓNICA 24HS.
+                        GOBIERNO EN LÍNEA</h4>
+                    <h2>148</h2>
+                </div>
+                <div class="cont_telefono">
+                    <h3>
+                        CORONAVIRUS
+                        COVID-19</h3>
+                </div>
+                <div class="cont_telefono">
+                    <h3>
+                        MINISTERIO
+                        DE SALUD</h3>
+                </div>
+            </div>
+            <div class="cont_img">
+                <img src="img/imagen_footer2.png" alt="">
+            </div>
+        </section>
     </main>
     <footer>
         <div class="back"></div>

@@ -14,8 +14,8 @@
 <body>
 
     <main>
-
-        <form action="" method="post">
+    
+        <form action="" method="post" id="form">
             <div class="cont_back">
                 <a href="index.php">
                     <span class="material-symbols-outlined">
@@ -39,6 +39,11 @@
                 <option value="Florida">Florida</option>
             </select>
             <button name="btn" class="btn_enviar">Enviar solicitud</button>
+            
+
+
+
+
             <?php
             $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
 
@@ -67,7 +72,7 @@
 
                     if ($stmt) {
                         // Vincula los parámetros y ejecuta la consulta
-                        $stmt->bind_param("ssssss", $nombre,$localidad, $solicitud, $telefono, $email,$dni);
+                        $stmt->bind_param("ssssss", $nombre, $localidad, $solicitud, $telefono, $email, $dni);
                         if ($stmt->execute()) {
                             $mensaje = "Datos insertados correctamente";
                         } else {
@@ -97,7 +102,7 @@
                     echo ("<h4>Pres. Hipólito Yrigoyen 1757, Florida</h4>");
                     echo ("<h4>Días y horarios:Lunes a viernes de 7.30 a 16.45hs y sábados de 8 a 14 hs.</h4>");
                 }
-                
+
                 if ($localidad == "Carapachay") {
                     echo ("<h3>tendra que ir a URI BURMAN</h3>");
                     echo ("<h4> Ituzaingó 5725,Carapachay </h4>");
@@ -122,7 +127,35 @@
             ?>
         </form>
     </main>
-    <script src="index2.js"></script>
+    <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    alert("hola")
+                    // Función para obtener parámetros de la URL
+                    function getParameterByName(name, url) {
+                        if (!url) url = window.location.href;
+                        console.log(url)
+                        name = name.replace(/[\[\]]/g, "\\$&");
+                        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                            results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        console.log(name)
+                        console.log(regex)
+                        return decodeURIComponent(results[2].replace(/\+/g, " "));
+                        
+                    }
+
+                    // Verifica si se debe ocultar el formulario
+                    var ocultarForm = getParameterByName("ocultarForm");
+                    if (ocultarForm != "true") {
+                        
+                        var miFormulario = document.getElementById("form");
+                        if (miFormulario) {
+                            miFormulario.style.display = "none";
+                        }
+                    }
+                });
+            </script>
 </body>
 
 </html>

@@ -12,10 +12,7 @@ var main = document.querySelector(".main");
 var btn_menu = document.querySelector(".btn_menu");
 var btn_close = document.querySelector(".btn_close");
 var cont_menu = document.querySelector(".cont_menu");
-
-
-
-btn_menu.addEventListener("click",() => {
+btn_menu.addEventListener("click", () => {
     cont_menu.classList.toggle("active")
 
 
