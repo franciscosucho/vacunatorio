@@ -127,14 +127,14 @@
 
             // Haciendo la conexión a la base de datos y pidiendo las canciones
             $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE id_producto >= 16 and dirigido_para='Recién nacidos'";
+            $queryInvent = "SELECT * FROM inventario WHERE dirigido_para='Recién nacidos'";
             $resultInvent = mysqli_query($conexionDatos, $queryInvent);
             echo ('<div class="cont_info">');
 
             $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4>  ' . $vacuna['dirigido_para'] . '</h4>');
+            echo ('<h4> ' . $vacuna['dirigido_para'] . '</h4>');
             while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
+                echo ('<div class="articuloo">');
                 echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
                 echo ('</div>');
             }
@@ -187,64 +187,18 @@
             <h3>Informacion sobre las vacunas</h3>
 
             <?php
-
             // Haciendo la conexión a la base de datos y pidiendo las canciones
             $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE id_producto >= 16 and dirigido_para='Recién nacidos'";
+            $queryInvent = "SELECT * FROM `inventario` WHERE dirigido_para!=''";
             $resultInvent = mysqli_query($conexionDatos, $queryInvent);
+
             echo ('<div class="cont_info">');
 
-            $vacuna = mysqli_fetch_array($resultInvent);
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('<p class="vacuna-name"> Efectividad en dias: ' . $vacuna['efectividad_en_dias'] . '</p>');
-                echo ('</div>');
-            }
-
-            echo ('</div> ');
-            $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE id_producto >= 16 and dirigido_para='Lactantes'";
-            $resultInvent = mysqli_query($conexionDatos, $queryInvent);
-            echo ('<div class="cont_info">');
-            $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4>  ' . $vacuna['dirigido_para'] . '</h4>');
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('<p class="vacuna-name"> Efectividad en dias: ' . $vacuna['efectividad_en_dias'] . '</p>');
-                echo ('</div>');
-            }
-            echo ('</div> ');
-
-            $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE dirigido_para='3 Meses'";
-            $resultInvent = mysqli_query($conexionDatos, $queryInvent);
-            echo ('<div class="cont_info">');
-            $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4> ' . $vacuna['dirigido_para'] . '</h4>');
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('<p class="vacuna-name"> Efectividad en dias: ' . $vacuna['efectividad_en_dias'] . '</p>');
-                echo ('</div>');
-            }
-            echo ('</div> ');
-
-            $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE id_producto >= 16 and dirigido_para='4 Meses'";
-            $resultInvent = mysqli_query($conexionDatos, $queryInvent);
-            echo ('<div class="cont_info">');
-            $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4>  ' . $vacuna['dirigido_para'] . '</h4>');
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('<p class="vacuna-name"> Efectividad en dias: ' . $vacuna['efectividad_en_dias'] . '</p>');
-                echo ('</div>');
-            }
-
-            echo ('</div> ');
+            lista("nombre");
+            lista("efectividad_en_dias");
+            lista("stock");
+            lista("dirigido_para");
+            echo ('</div>');
             ?>
 
         </section>
@@ -309,3 +263,51 @@
 </body>
 
 </html>
+
+<?php
+function lista($opcion)
+{
+    $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
+    $queryInvent = "SELECT id_producto,$opcion FROM `inventario` WHERE dirigido_para!=''";
+    $resultInvent = mysqli_query($conexionDatos, $queryInvent);
+    $vacuna = mysqli_fetch_array($resultInvent);
+    echo ('<div class="cont_lista">');
+    if ($opcion == "nombre") {
+        echo ('<h4 class="titulo"> NOMBRE</h4>');
+    } elseif ($opcion == "efectividad_en_dias") {
+        echo ('<h4 class="titulo">EFECTO</h4>');
+    } elseif ($opcion == "dirigido_para") {
+        echo ('<h4 class="titulo">DIRIGIDO PARA  </h4>');
+    }
+    elseif ($opcion == "stock") {
+        echo ('<h4 class="titulo">Stock</h4>');
+    }
+    while ($vacuna = mysqli_fetch_array($resultInvent)) {
+        if ($vacuna['id_producto'] % 2 == 0) {
+            if ($opcion == "nombre") {
+                echo ('<p class="vacuna-name par">' . $vacuna['nombre'] . '</p>');
+            } elseif ($opcion == "efectividad_en_dias") {
+                echo ('<p class="vacuna-name par"> ' . $vacuna['efectividad_en_dias'] . '</p>');
+            } elseif ($opcion == "dirigido_para") {
+                echo ('<p class="vacuna-name par">' . $vacuna['dirigido_para'] . '</p>');
+            }
+            elseif ($opcion == "stock") {
+                echo ('<p class="vacuna-name par">' . $vacuna['stock'] . '</p>');
+            }
+        }
+        else{
+            if ($opcion == "nombre") {
+                echo ('<p class="vacuna-name">' . $vacuna['nombre'] . '</p>');
+            } elseif ($opcion == "efectividad_en_dias") {
+                echo ('<p class="vacuna-name"> ' . $vacuna['efectividad_en_dias'] . '</p>');
+            } elseif ($opcion == "dirigido_para") {
+                echo ('<p class="vacuna-name">' . $vacuna['dirigido_para'] . '</p>');
+            }
+            elseif ($opcion == "stock") {
+                echo ('<p class="vacuna-name">' . $vacuna['stock'] . '</p>');
+            }
+        }
+    }
+    echo ('</div>');
+}
+?>

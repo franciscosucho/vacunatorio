@@ -174,6 +174,10 @@ body {
             gap: 30px;
             height: 100%;
 
+            &.ocultar {
+                display: none;
+            }
+
             h4 {
                 font-size: 1.5em;
                 color: rgb(233, 231, 231);
@@ -336,29 +340,51 @@ body {
                 transition: all .2s;
                 cursor: pointer;
                 padding-top: 10px;
-                background-color: rgba(38, 63, 172, 0.534);
+                background-color: rgba(170, 170, 170, 0);
                 border-radius: 30px;
                 margin: 10px;
-                width: 60%;
+                width: 80%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: column;
 
-                &:hover {
-                    background-color: rgba(30, 50, 136, 0.534);
-                    transform: scale(1.1);
-                }
-
-                .articulo {
-                    color: white;
-                    font-weight: 500;
-                    gap: 10px;
+                .cont_lista {
+                    border: 1px solid rgba(128, 128, 128, 0.39);
+                    border-right: none;
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: flex-start;
+                    align-items: flex-start;
                     flex-direction: column;
-                    padding: 20px;
+                    width: 20%;
+                    .titulo {
+                        width: 100%;
+                        height: 60px;
+                        padding-left: 10px;
+                        font-size: 1.3em;
+                        font-weight: 500;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items:center;
+                        color: rgb(78, 78, 78);
+                        border-right: 1px solid rgba(128, 128, 128, 0.39);
+
+                    }
+
+                    .vacuna-name {
+                        border-right: 1px solid rgba(128, 128, 128, 0.39);
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-left: 10px;
+                        height: 60px;
+                        width: 100%;
+                        color: rgb(68, 68, 68);
+                        background-color: rgba(10, 99, 129, 0.548);
+                    }
+
+                    .par {
+                        background-color: rgba(255, 255, 255, 0.644);
+                    }
                 }
             }
 
@@ -443,6 +469,11 @@ body {
                         background-color: rgba(99, 82, 160, 0.644);
                         transform: scale(1.1);
                     }
+
+                }
+
+                .par {
+                    background-color: rgba(18, 7, 56, 0.644);
                 }
             }
         }
@@ -450,6 +481,7 @@ body {
 
 
         .sub_footer {
+
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
@@ -458,6 +490,7 @@ body {
             border-top: 1px solid rgba(163, 163, 163, 0.562);
             height: 30vh;
             background-color: #ffffff;
+            margin-top: 20%;
 
             .cont_img {
                 height: 200px;

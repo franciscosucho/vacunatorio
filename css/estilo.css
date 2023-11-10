@@ -154,6 +154,9 @@ body main .sec_prin {
   gap: 30px;
   height: 100%;
 }
+body main .sec_prin.ocultar {
+  display: none;
+}
 body main .sec_prin h4 {
   font-size: 1.5em;
   color: rgb(233, 231, 231);
@@ -291,28 +294,48 @@ body main .sec_info .cont_info {
   transition: all 0.2s;
   cursor: pointer;
   padding-top: 10px;
-  background-color: rgba(38, 63, 172, 0.534);
+  background-color: rgba(170, 170, 170, 0);
   border-radius: 30px;
   margin: 10px;
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body main .sec_info .cont_info .cont_lista {
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  border-right: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
+  width: 20%;
 }
-body main .sec_info .cont_info:hover {
-  background-color: rgba(30, 50, 136, 0.534);
-  transform: scale(1.1);
-}
-body main .sec_info .cont_info .articulo {
-  color: white;
+body main .sec_info .cont_info .cont_lista .titulo {
+  width: 100%;
+  height: 60px;
+  padding-left: 10px;
+  font-size: 1.3em;
   font-weight: 500;
-  gap: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-  padding: 20px;
+  color: rgb(78, 78, 78);
+  border-right: 1px solid rgba(128, 128, 128, 0.39);
+}
+body main .sec_info .cont_info .cont_lista .vacuna-name {
+  border-right: 1px solid rgba(128, 128, 128, 0.39);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  height: 60px;
+  width: 100%;
+  color: rgb(68, 68, 68);
+  background-color: rgba(10, 99, 129, 0.548);
+}
+body main .sec_info .cont_info .cont_lista .par {
+  background-color: rgba(255, 255, 255, 0.644);
 }
 body main .sec_img {
   border-radius: 20px;
@@ -383,6 +406,9 @@ body main .sec_horarios .cont_info .articulo:hover {
   background-color: rgba(99, 82, 160, 0.644);
   transform: scale(1.1);
 }
+body main .sec_horarios .cont_info .par {
+  background-color: rgba(18, 7, 56, 0.644);
+}
 body main .sub_footer {
   display: flex;
   justify-content: flex-start;
@@ -392,6 +418,7 @@ body main .sub_footer {
   border-top: 1px solid rgba(163, 163, 163, 0.562);
   height: 30vh;
   background-color: #ffffff;
+  margin-top: 20%;
 }
 body main .sub_footer .cont_img {
   height: 200px;

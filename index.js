@@ -12,9 +12,11 @@ var main = document.querySelector(".main");
 var btn_menu = document.querySelector(".btn_menu");
 var btn_close = document.querySelector(".btn_close");
 var cont_menu = document.querySelector(".cont_menu");
+var sec_prin=document.querySelector(".sec_prin");
+
 btn_menu.addEventListener("click", () => {
     cont_menu.classList.toggle("active")
-
+    
 
 })
 
@@ -31,6 +33,7 @@ ver_vacunas.addEventListener("click", () => {
     sec_info.classList.remove("active")
     sec_img.classList.remove('active')
     sec_horarios.classList.remove("active")
+    sec_prin.classList.add("ocultar")
 
 })
 
@@ -39,7 +42,7 @@ ver_info.addEventListener("click", () => {
     sec_vacunas.classList.remove("active")
     sec_img.classList.remove('active')
     sec_horarios.classList.remove("active")
-
+    sec_prin.classList.add("ocultar")
 })
 
 ver_img.addEventListener("click", () => {
@@ -47,7 +50,7 @@ ver_img.addEventListener("click", () => {
     sec_vacunas.classList.remove("active")
     sec_info.classList.remove('active');
     sec_horarios.classList.remove("active")
-
+    sec_prin.classList.add("ocultar")
 })
 ver_horarios.addEventListener("click", () => {
 
@@ -55,6 +58,6 @@ ver_horarios.addEventListener("click", () => {
     sec_img.classList.remove('active')
     sec_vacunas.classList.remove("active")
     sec_info.classList.remove('active');
-
+    sec_prin.classList.add("ocultar")
 })
 
