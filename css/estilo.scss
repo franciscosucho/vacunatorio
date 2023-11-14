@@ -24,6 +24,7 @@ body {
             left: 0px;
             position: absolute;
             height: 80px;
+            cursor: pointer;
         }
 
         .cont_he {
@@ -114,7 +115,8 @@ body {
                 height: 10%;
                 width: 40vw;
 
-                li {
+                a {
+                    text-decoration: none;
                     transition: all .2s ease-in-out;
                     cursor: pointer;
                     padding: 10px;
@@ -177,7 +179,7 @@ body {
             &.ocultar {
                 display: none;
             }
-
+            
             h4 {
                 font-size: 1.5em;
                 color: rgb(233, 231, 231);
@@ -381,7 +383,18 @@ body {
                         color: rgb(68, 68, 68);
                         background-color: rgba(10, 99, 129, 0.548);
                     }
-
+                    .rojo{
+                        font-weight: 600;
+                        color: rgb(252, 42, 42);
+                    }
+                    .amarillo{
+                        font-weight: 500;
+                        color: rgb(255, 255, 38)
+                    }
+                    .verde{ 
+                        font-weight: 600;
+                        color: rgb(85, 231, 56)
+                    }
                     .par {
                         background-color: rgba(255, 255, 255, 0.644);
                     }

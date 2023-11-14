@@ -24,6 +24,7 @@ body header img {
   left: 0px;
   position: absolute;
   height: 80px;
+  cursor: pointer;
 }
 body header .cont_he {
   display: flex;
@@ -103,7 +104,8 @@ body header .cont_he ul {
   height: 10%;
   width: 40vw;
 }
-body header .cont_he ul li {
+body header .cont_he ul a {
+  text-decoration: none;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   padding: 10px;
@@ -114,7 +116,7 @@ body header .cont_he ul li {
   font-weight: bolder;
   list-style: none;
 }
-body header .cont_he ul li:hover {
+body header .cont_he ul a:hover {
   background-color: rgb(3, 128, 170);
 }
 body header .cont_vic {
@@ -333,6 +335,18 @@ body main .sec_info .cont_info .cont_lista .vacuna-name {
   width: 100%;
   color: rgb(68, 68, 68);
   background-color: rgba(10, 99, 129, 0.548);
+}
+body main .sec_info .cont_info .cont_lista .rojo {
+  font-weight: 600;
+  color: rgb(252, 42, 42);
+}
+body main .sec_info .cont_info .cont_lista .amarillo {
+  font-weight: 500;
+  color: rgb(255, 255, 38);
+}
+body main .sec_info .cont_info .cont_lista .verde {
+  font-weight: 600;
+  color: rgb(85, 231, 56);
 }
 body main .sec_info .cont_info .cont_lista .par {
   background-color: rgba(255, 255, 255, 0.644);

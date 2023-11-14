@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -14,24 +14,23 @@
 
 <body>
     <header>
-        <img src="https://citymis.co/custom/vicentelopez/public/_css/logo150x550.png" alt="">
+        <img id="img_prin" src="https://citymis.co/custom/vicentelopez/public/_css/logo150x550.png" alt="">
         <div class="cont_he">
 
             <h1>Vacunatorio</h1>
             <ul>
-                <li class="ver_info">Informacion sobre las vacunas </li>
-                <li class="ver_vacunas">Tipos de vacunas</li>
-                <li class="ver_img">Ubicaciones de vacuatorios</li>
-                <li class="ver_horarios">Horarios de Vacunacion</li>
-                <li class="ver_horarios">Info vacunacion</li>
+                <a href="#sec_info"  class="ver_info">Información sobre las vacunas </a>
+                <a class="ver_img">Ubicaciones de vacunatorios</a>
+                <a class="ver_horarios">Horarios de Vacunación</a>
+                <a class="ver_horarios">Info vacunación</a>
             </ul>
             <div class="cont_menu">
-                <h3>Menu de usuario</h3>
+                <h3>Menú de usuario</h3>
                 <div class="cont_obj">
                     <span class="material-symbols-outlined">
                         list_alt
                     </span>
-                    <a>Ver turnos medicos</a>
+                    <a>Ver turnos médicos</a>
                 </div>
 
                 <div class="cont_obj">
@@ -59,7 +58,7 @@
         </div>
 
         <div class="cont_vic">
-            <h3>Vicente lopez</h3>
+            <h3>Vicente López</h3>
         </div>
 
     </header>
@@ -68,16 +67,16 @@
         <img src="https://www.vicentelopez.gov.ar/contenido/2023-01-18-961-imagen.jpg" alt="">
         <section class="sec_prin">
 
-            <h2 class="texto_main">Plan Provincial de vacunacion</h2>
-            <h5 class="text_encabezado">Que es?</h5>
-            <p class="text_p">Buenos Aires Vacunate es el <b> Público, Gratuito y Optativo </b> de vacunación contra el coronavirus en la Provincia de Buenos Aires.</p>
-            <p class="text_p"> Después de 10 meses de comenzar la pandemia, se convirtió en el <b>operativo de vacunación más grande </b>y sin precedentes en la historia bonaerense.</p>
-            <p class="text_p"> Incluye la distribución, organización y vacunación simultánea en los <b> 135 municipios del territorio provincial.</b>
+            <h2 class="texto_main">Plan Provincial de vacunación</h2>
+            <h5 class="text_encabezado">¿Qué es?</h5>
+            <p class="text_p">Buenos Aires Vacunate es el <b>Público, Gratuito y Optativo</b> de vacunación contra el coronavirus en la Provincia de Buenos Aires.</p>
+            <p class="text_p">Después de 10 meses de comenzar la pandemia, se convirtió en el <b>operativo de vacunación más grande</b> y sin precedentes en la historia bonaerense.</p>
+            <p class="text_p">Incluye la distribución, organización y vacunación simultánea en los <b>135 municipios del territorio provincial.</b>
 
             </p>
             <h5 class="text_encabezado">¿Cómo te vacunas?</h5>
             <p class="text_p"><b>La vacuna es libre y federal para todas y todos los bonaerenses, personas de otras jurisdicciones y extranjeras</b>, a partir de los 6 meses de edad, en todos los vacunatorios Covid de La Provincia de Buenos Aires.</p>
-            <p class="text_p">Si querés registrarte podés hacerlo desde la Web ingresando en “ me quiero registrar” o desde la App Vacunate. Ahí vas a poder acceder a tus datos y la constancia de las vacunas recibidas.
+            <p class="text_p">Si quieres registrarte puedes hacerlo desde la Web ingresando en “me quiero registrar” o desde la App Vacunate. Ahí podrás acceder a tus datos y la constancia de las vacunas recibidas.
             </p>
             <h5 class="text_encabezado">Pautas de Alarma</h5>
             <p class="text_p">La aplicación de cualquier vacuna es un proceso seguro, pero existen algunos efectos que pueden aparecer luego de su colocación.</p>
@@ -120,71 +119,8 @@
                 </div>
             </div>
         </section>
-        <section class="sec_vacunas">
-            <h3 class="text_vacunas">Tipos De vacuna</h3>
-
-            <?php
-
-            // Haciendo la conexión a la base de datos y pidiendo las canciones
-            $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE dirigido_para='Recién nacidos'";
-            $resultInvent = mysqli_query($conexionDatos, $queryInvent);
-            echo ('<div class="cont_info">');
-
-            $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4> ' . $vacuna['dirigido_para'] . '</h4>');
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articuloo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('</div>');
-            }
-
-            echo ('</div> ');
-            $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE id_producto >= 16 and dirigido_para='Lactantes'";
-            $resultInvent = mysqli_query($conexionDatos, $queryInvent);
-            echo ('<div class="cont_info">');
-            $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4>  ' . $vacuna['dirigido_para'] . '</h4>');
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('</div>');
-            }
-            echo ('</div> ');
-
-            $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE dirigido_para='3 Meses'";
-            $resultInvent = mysqli_query($conexionDatos, $queryInvent);
-            echo ('<div class="cont_info">');
-            $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4> ' . $vacuna['dirigido_para'] . '</h4>');
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('</div>');
-            }
-            echo ('</div> ');
-
-            $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
-            $queryInvent = "SELECT * FROM inventario WHERE id_producto >= 16 and dirigido_para='4 Meses'";
-            $resultInvent = mysqli_query($conexionDatos, $queryInvent);
-            echo ('<div class="cont_info">');
-            $vacuna = mysqli_fetch_array($resultInvent);
-            echo ('<h4>  ' . $vacuna['dirigido_para'] . '</h4>');
-            while ($vacuna = mysqli_fetch_array($resultInvent)) {
-                echo ('<div class="articulo">');
-                echo ('<p class="vacuna-name"> Nombre: ' . $vacuna['nombre'] . '</p>');
-                echo ('</div>');
-            }
-
-            echo ('</div> ');
-
-            ?>
-
-        </section>
-        <section class="sec_info">
-            <h3>Informacion sobre las vacunas</h3>
+        <section class="sec_info" id="sec_info">
+            <h3>Información sobre las vacunas</h3>
 
             <?php
             // Haciendo la conexión a la base de datos y pidiendo las canciones
@@ -208,7 +144,7 @@
 
         </section>
         <section class="sec_horarios">
-            <h3>Horarios de Vacunacion.</h3>
+            <h3>Horarios de Vacunación.</h3>
 
             <?php
             // Haciendo la conexión a la base de datos y pidiendo las canciones
@@ -220,10 +156,10 @@
             $vacuna = mysqli_fetch_array($resultInvent);
             while ($vacuna = mysqli_fetch_array($resultInvent)) {
                 echo ('<div class="articulo">');
-                echo ('<h4 class="vacuna-name"> Clinica: ' . $vacuna['nombre'] . '</h4>');
-                echo ('<p class="vacuna-name"> Direccion: ' . $vacuna['direccion'] . '</p>');
-                echo ('<p class="vacuna-name"> Telefono: ' . $vacuna['telefono'] . '</p>');
-                echo ('<p class="vacuna-name"> Horario de Atencion: ' . $vacuna['horario_atencion'] . '</p>');
+                echo ('<h4 class="vacuna-name"> Clínica: ' . $vacuna['nombre'] . '</h4>');
+                echo ('<p class="vacuna-name"> Dirección: ' . $vacuna['direccion'] . '</p>');
+                echo ('<p class="vacuna-name"> Teléfono: ' . $vacuna['telefono'] . '</p>');
+                echo ('<p class="vacuna-name"> Horario de Atención: ' . $vacuna['horario_atencion'] . '</p>');
                 echo ('</div>');
             }
             echo ('</div> ');
@@ -265,8 +201,7 @@
 </html>
 
 <?php
-function lista($opcion)
-{
+function lista($opcion){
     $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
     $queryInvent = "SELECT id_producto,$opcion FROM `inventario` WHERE dirigido_para!=''";
     $resultInvent = mysqli_query($conexionDatos, $queryInvent);
@@ -275,12 +210,12 @@ function lista($opcion)
     if ($opcion == "nombre") {
         echo ('<h4 class="titulo"> NOMBRE</h4>');
     } elseif ($opcion == "efectividad_en_dias") {
-        echo ('<h4 class="titulo">EFECTO</h4>');
+        echo ('<h4 class="titulo">EFECTO EN DIAS</h4>');
     } elseif ($opcion == "dirigido_para") {
-        echo ('<h4 class="titulo">DIRIGIDO PARA  </h4>');
+        echo ('<h4 class="titulo">DIRIGIDO PARA</h4>');
     }
     elseif ($opcion == "stock") {
-        echo ('<h4 class="titulo">Stock</h4>');
+        echo ('<h4 class="titulo">STOCK</h4>');
     }
     while ($vacuna = mysqli_fetch_array($resultInvent)) {
         if ($vacuna['id_producto'] % 2 == 0) {
@@ -304,7 +239,17 @@ function lista($opcion)
                 echo ('<p class="vacuna-name">' . $vacuna['dirigido_para'] . '</p>');
             }
             elseif ($opcion == "stock") {
-                echo ('<p class="vacuna-name">' . $vacuna['stock'] . '</p>');
+                if($vacuna['stock']>=100 ){
+                    echo ('<p class="vacuna-name verde ">' . $vacuna['stock'] . '</p>');
+                }
+                elseif($vacuna['stock']<50 && $vacuna['stock']>10){
+                    echo ('<p class="vacuna-name amarillo ">' . $vacuna['stock'] . '</p>');
+                }
+                elseif($vacuna['stock']<10){
+                    echo ('<p class="vacuna-name rojo ">' .$vacuna['stock']. '</p>');
+                }
+                
+
             }
         }
     }

@@ -29,7 +29,7 @@
             <input type="text" placeholder="Dni" name="dni" class="enviar">
             <input type="text" class="solicitud" placeholder="solicitud" name="solicitud">
             <input type="text" placeholder="Telefono" name="telefono">
-            <input type="text" placeholder="Correo electronico" name="email">
+            <input type="email" placeholder="Correo electronico" name="email">
             <select id="localidad" name="localidad" class="selec">
                 <option value="Boulogne">Boulogne</option>
                 <option value="Carapachay">Carapachay</option>
