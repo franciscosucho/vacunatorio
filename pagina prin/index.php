@@ -5,11 +5,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vacunatorio</title>
+   
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="shortcut icon" href="https://citymis.co/custom/vicentelopez/public/_css/logo150x550.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.vicentelopez.gov.ar/apple-touch-icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Vacunatorio</title>
 </head>
 
 <body>
@@ -27,23 +28,19 @@
             <div class="cont_menu">
                 <h3>Menú de usuario</h3>
                 <div class="cont_obj">
-                    <span class="material-symbols-outlined">
-                        list_alt
-                    </span>
-                    <a>Ver turnos médicos</a>
                 </div>
 
                 <div class="cont_obj">
                     <span class="material-symbols-outlined">
                         syringe
                     </span>
-                    <a href="form.php?ocultarForm=true">Solicitar vacuna</a>
+                    <a href="../turno/form.php">Solicitar turno</a>
                 </div>
                 <div class="cont_obj">
                     <span class="material-symbols-outlined">
                         edit_note
                     </span>
-                    <a href="form.php" id="modificar_turno">Modificar turno</a>
+                    <a href="../modificar turno/modificar.php" id="modificar_turno">Modificar turno</a>
                 </div>
 
 
@@ -64,7 +61,7 @@
     </header>
     <main class="main">
 
-        <img src="https://www.vicentelopez.gov.ar/contenido/2023-01-18-961-imagen.jpg" alt="">
+        <img id="img_main" src="https://www.vicentelopez.gov.ar/contenido/2023-01-18-961-imagen.jpg" alt="">
         <section class="sec_prin">
 
             <h2 class="texto_main">Plan Provincial de vacunación</h2>
@@ -119,6 +116,64 @@
                 </div>
             </div>
         </section>
+<?php 
+function ver_turnos($opcion){
+    $conexionDatos = new mysqli('localhost', 'root', '', 'vacunatorio');
+    $queryInvent = "SELECT id,$opcion FROM `solicitud_turno`";
+    $resultInvent = mysqli_query($conexionDatos, $queryInvent);
+    $vacuna = mysqli_fetch_array($resultInvent);
+    echo ('<div class="cont_lista">');
+    if ($opcion == "nombre") {
+        echo ('<h4 class="titulo"> NOMBRE</h4>');
+    } elseif ($opcion == "dia") {
+        echo ('<h4 class="titulo">FECHA DEL TURNO</h4>');
+    } elseif ($opcion == "hora") {
+        echo ('<h4 class="titulo">HORARIO</h4>');
+    }
+    elseif ($opcion == "desc") {
+        echo ('<h4 class="titulo">DESCRIPCIÓN</h4>');
+    }
+    while ($vacuna = mysqli_fetch_array($resultInvent)) {
+        if ($vacuna['id_producto'] % 2 == 0) {
+            if ($opcion == "nombre") {
+                echo ('<p class="vacuna-name par">' . $vacuna['nombre'] . '</p>');
+            } elseif ($opcion == "efectividad_en_dias") {
+                echo ('<p class="vacuna-name par"> ' . $vacuna['efectividad_en_dias'] . '</p>');
+            } elseif ($opcion == "dirigido_para") {
+                echo ('<p class="vacuna-name par">' . $vacuna['dirigido_para'] . '</p>');
+            }
+            elseif ($opcion == "stock") {
+                echo ('<p class="vacuna-name par">' . $vacuna['stock'] . '</p>');
+            }
+        }
+        else{
+            if ($opcion == "nombre") {
+                echo ('<p class="vacuna-name">' . $vacuna['nombre'] . '</p>');
+            } elseif ($opcion == "efectividad_en_dias") {
+                echo ('<p class="vacuna-name"> ' . $vacuna['efectividad_en_dias'] . '</p>');
+            } elseif ($opcion == "dirigido_para") {
+                echo ('<p class="vacuna-name">' . $vacuna['dirigido_para'] . '</p>');
+            }
+            elseif ($opcion == "stock") {
+                if($vacuna['stock']>=100 ){
+                    echo ('<p class="vacuna-name verde ">' . $vacuna['stock'] . '</p>');
+                }
+                elseif($vacuna['stock']<50 && $vacuna['stock']>10){
+                    echo ('<p class="vacuna-name amarillo ">' . $vacuna['stock'] . '</p>');
+                }
+                elseif($vacuna['stock']<10){
+                    echo ('<p class="vacuna-name rojo ">' .$vacuna['stock']. '</p>');
+                }
+                
+
+            }
+        }
+    }
+    echo ('</div>');
+
+    }
+?>
+       
         <section class="sec_info" id="sec_info">
             <h3>Información sobre las vacunas</h3>
 

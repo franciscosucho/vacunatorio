@@ -7,14 +7,14 @@
 
 body {
   height: 100%;
-  background-color: rgba(193, 209, 212, 0.575);
+  background-color: rgba(8, 1, 104, 0.384);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 body main {
   position: absolute;
-  top: 20%;
+  top: 10%;
 }
 body main form {
   display: flex;
@@ -22,8 +22,8 @@ body main form {
   justify-content: space-around;
   align-items: center;
   width: 30vw;
-  height: 70vh;
-  background-color: rgba(172, 172, 172, 0.616);
+  height: 80vh;
+  background-color: rgba(73, 105, 209, 0.616);
   border-radius: 10px;
   box-shadow: 2px 0px 10px 2px rgba(80, 80, 80, 0.575);
 }
@@ -37,32 +37,32 @@ body main form .cont_back a {
   text-decoration: none;
 }
 body main form .cont_back a span {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 body main form h1 {
-  color: rgb(34, 34, 34);
-  border-bottom: 3px solid rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 body main form input {
-  color: rgb(31, 31, 31);
+  color: rgb(226, 226, 226);
   border: none;
   background: none;
   text-decoration: none;
   outline: none;
   box-shadow: none;
-  border-bottom: 1px solid rgb(34, 34, 34);
+  border-bottom: 1px solid rgb(253, 253, 253);
   width: 70%;
 }
 body main form input::-moz-placeholder {
-  color: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
 }
 body main form input::placeholder {
-  color: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
 }
 body main form .selec {
   width: 70%;
   text-align: center;
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(235, 235, 235);
   height: 40px;
   box-shadow: 2px 0px 10px 2px rgba(80, 80, 80, 0.575);
 }

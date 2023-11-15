@@ -1,0 +1,267 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body header {
+  padding-top: 5vh;
+  background-color: rgb(8, 147, 194);
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+body header img {
+  top: 5px;
+  left: 0px;
+  position: absolute;
+  height: 80px;
+  cursor: pointer;
+}
+body header .cont_he {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+}
+body header .cont_he h1 {
+  padding-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+body header .cont_he .icon {
+  top: -50%;
+  cursor: pointer;
+  position: relative;
+  left: 110%;
+  color: white;
+}
+body header .cont_he .cont_menu {
+  z-index: 10000000;
+  position: absolute;
+  padding-top: 50px;
+  width: 30%;
+  height: 100vh;
+  top: 0%;
+  left: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transform: translate(1000px);
+  background-color: rgb(16, 112, 145);
+  transition: all 0.3s ease-out;
+}
+body header .cont_he .cont_menu.active {
+  transform: translate(0px);
+}
+body header .cont_he .cont_menu h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  color: white;
+}
+body header .cont_he .cont_menu .icon {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  background-color: rgb(10, 84, 109);
+  border-radius: 3px;
+  color: white;
+  padding: 3px;
+}
+body header .cont_he .cont_menu .cont_obj {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  gap: 5px;
+  width: 40%;
+  transition: all 0.2s ease-in-out;
+}
+body header .cont_he .cont_menu .cont_obj a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+}
+body header .cont_he .cont_menu .cont_obj:hover {
+  box-shadow: 0 2px rgb(255, 255, 255);
+}
+body header .cont_he .cont_menu .cont_obj li {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+}
+body header .cont_he .cont_menu .cont_obj:hover {
+  box-shadow: 0 2px rgb(255, 255, 255);
+}
+body header .cont_he ul {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+  width: 40vw;
+}
+body header .cont_he ul a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  list-style: none;
+}
+body header .cont_he ul a:hover {
+  background-color: rgb(3, 128, 170);
+}
+body header .cont_vic {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+body header .cont_vic h3 {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(18, 204, 195);
+}
+body main {
+  margin-top: 20vh;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main section {
+  width: 40%;
+  background-color: rgba(41, 72, 163, 0.582);
+  height: auto;
+  box-shadow: 10px 6px 23px -6px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 10px 6px 23px -6px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 10px 6px 23px -6px rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding-bottom: 5%;
+}
+body main section .form {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+body main section .form h3 {
+  color: white;
+  font-size: 3rem;
+  border-bottom: 4px solid white;
+}
+body main section .form input {
+  text-align: center;
+  width: 60%;
+  height: 45px;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: rgb(20, 20, 20);
+  border: 2px solid rgba(73, 73, 214, 0.788);
+  border: none;
+  box-shadow: 4px 3px 14px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 3px 14px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 3px 14px -2px rgba(0, 0, 0, 0.75);
+}
+body main section .form input:focus {
+  border: 2px solid rgba(25, 25, 180, 0.788);
+  outline: none;
+}
+body main section .form label {
+  color: #fcfcfc;
+  text-align: start;
+  width: 60%;
+  font-size: 1.3rem;
+}
+body main section .form button {
+  width: 40%;
+  background-color: rgb(113, 113, 206);
+  color: white;
+  height: 3rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+body main section .form button:hover {
+  background-color: rgb(86, 86, 201);
+}
+body main section .form .cont_listas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+body main section .form .cont_listas .cont_lista {
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  border-right: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 30%;
+  height: auto;
+}
+body main section .form .cont_listas .cont_lista .titulo {
+  width: 100%;
+  height: 60px;
+  padding-left: 10px;
+  font-size: 1.3em;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(78, 78, 78);
+  border-right: 1px solid rgba(128, 128, 128, 0.39);
+}
+body main section .form .cont_listas .cont_lista .vacuna-name {
+  border-right: 1px solid rgba(128, 128, 128, 0.39);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  height: 60px;
+  width: 100%;
+  color: rgb(68, 68, 68);
+  background-color: rgba(10, 99, 129, 0.548);
+}
+body main section .form .cont_listas .cont_lista .rojo {
+  font-weight: 600;
+  color: rgb(252, 42, 42);
+}
+body main section .form .cont_listas .cont_lista .amarillo {
+  font-weight: 500;
+  color: rgb(255, 255, 38);
+}
+body main section .form .cont_listas .cont_lista .verde {
+  font-weight: 600;
+  color: rgb(85, 231, 56);
+}
+body main section .form .cont_listas .cont_lista .par {
+  background-color: rgba(255, 255, 255, 0.644);
+}/*# sourceMappingURL=estilo.css.map */

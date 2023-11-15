@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-10-2023 a las 15:38:49
+-- Tiempo de generación: 15-11-2023 a las 01:17:40
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -154,7 +154,7 @@ CREATE TABLE `inventario` (
   `nombre` varchar(33) NOT NULL,
   `fabricante` varchar(33) NOT NULL,
   `stock` int(11) NOT NULL,
-  `efectividad_en_dias` int(11) NOT NULL,
+  `efectividad_en_dias` varchar(11) NOT NULL,
   `dirigido_para` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -163,35 +163,35 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id_producto`, `nombre`, `fabricante`, `stock`, `efectividad_en_dias`, `dirigido_para`) VALUES
-(1, 'Producto A', 'Fabricante 1', 344, 24, ''),
-(2, 'Producto B', 'Fabricante 2', 75, 270, ''),
-(3, 'Producto C', 'Fabricante 3', 50, 180, ''),
-(4, 'Producto D', 'Fabricante 4', 125, 300, ''),
-(5, 'Producto E', 'Fabricante 5', 90, 240, ''),
-(6, 'Producto F', 'Fabricante 6', 60, 120, ''),
-(7, 'Producto G', 'Fabricante 7', 110, 210, ''),
-(8, 'Producto H', 'Fabricante 8', 70, 150, ''),
-(9, 'Producto I', 'Fabricante 9', 85, 180, ''),
-(10, 'Producto J', 'Fabricante 10', 120, 365, ''),
-(11, 'Producto K', 'Fabricante 11', 55, 90, ''),
-(12, 'Producto L', 'Fabricante 12', 95, 210, ''),
-(13, 'Producto M', 'Fabricante 13', 70, 120, ''),
-(14, 'Producto N', 'Fabricante 14', 150, 365, ''),
-(15, 'Producto O', 'Fabricante 15', 80, 240, ''),
-(16, 'Hepatitis B', 'Bayern', 200, 20, 'Recién nacidos'),
-(17, 'BCG (Tuberculosis)', 'Galeno', 30, 10, 'Recién nacidos'),
-(18, 'Polio IPV (Salk)', '', 200, 10, 'Lactantes'),
-(19, 'Quíntuple / Pentavalente', '', 200, 10, 'Lactantes'),
-(20, 'Neumococo Conjugada (Neumo 13)', '', 200, 10, 'Lactantes'),
-(21, 'Rotavirus', '', 100, 20, 'Lactantes'),
-(22, 'Meningococo', '', 200, 40, '3 Meses'),
-(23, 'Polio IPV (Salk)', '', 40, 30, '4 Meses'),
-(24, 'Quíntuple / Pentavalente', '', 40, 300, '4 Meses'),
-(25, 'Neumococo Conjugada (Neumo 13)', '', 20, 40, '4 Meses'),
-(26, 'Rotavirus', '', 200, 100, '4 Meses'),
-(27, 'Doble Bacteriana (cada 10 años)', '', 0, 0, 'ADULTOS'),
-(28, 'Hepatitis B', '', 0, 0, 'ADULTOS'),
-(29, 'eumococo Conjugada (Neumo 11)', 'bayern', 100, 10, '3 Meses');
+(1, 'Producto A', 'Fabricante 1', 344, '24 dias', ''),
+(2, 'Producto B', 'Fabricante 2', 75, '270 dias', ''),
+(3, 'Producto C', 'Fabricante 3', 50, '180 dias', ''),
+(4, 'Producto D', 'Fabricante 4', 125, '300 dias', ''),
+(5, 'Producto E', 'Fabricante 5', 90, '240 dias', ''),
+(6, 'Producto F', 'Fabricante 6', 60, '120', ''),
+(7, 'Producto G', 'Fabricante 7', 110, '210 dias', ''),
+(8, 'Producto H', 'Fabricante 8', 70, '150 dias', ''),
+(9, 'Producto I', 'Fabricante 9', 85, '180 dias', ''),
+(10, 'Producto J', 'Fabricante 10', 120, '365 dias', ''),
+(11, 'Producto K', 'Fabricante 11', 55, '90 dias', ''),
+(12, 'Producto L', 'Fabricante 12', 95, '210 dias', ''),
+(13, 'Producto M', 'Fabricante 13', 70, '120 dias', ''),
+(14, 'Producto N', 'Fabricante 14', 150, '365 dias', ''),
+(15, 'Producto O', 'Fabricante 15', 80, '240 dias', ''),
+(16, 'Hepatitis B', 'Bayern', 200, '20 dias', 'Recién nacidos'),
+(17, 'BCG (Tuberculosis)', 'Galeno', 30, '10 dias', 'Recién nacidos'),
+(18, 'Polio IPV (Salk)', '', 200, '10 dias', 'Lactantes'),
+(19, 'Quíntuple / Pentavalente', '', 200, '10 dias', 'Lactantes'),
+(20, 'Neumococo Conjugada (Neumo 13)', '', 200, '10 dias', 'Lactantes'),
+(21, 'Rotavirus', '', 100, '20 dias', 'Lactantes'),
+(22, 'Meningococo', '', 200, '40 dias', '3 Meses'),
+(23, 'Polio IPV (Salk)', '', 40, '30 dias', '4 Meses'),
+(24, 'Quíntuple / Pentavalente', '', 40, '300 dias', '4 Meses'),
+(25, 'Neumococo Conjugada (Neumo 13)', '', 20, '40 dias', '4 Meses'),
+(26, 'Rotavirus', '', 200, '100', '4 Meses'),
+(27, 'Doble Bacteriana (cada 10 años)', '', 0, '0', 'ADULTOS'),
+(28, 'Hepatitis B', '', 0, '0', 'ADULTOS'),
+(29, 'eumococo Conjugada (Neumo 11)', 'bayern', 100, '10', '3 Meses');
 
 -- --------------------------------------------------------
 
@@ -296,30 +296,33 @@ CREATE TABLE `solicitud_turno` (
   `localidad` varchar(30) NOT NULL,
   `descripcion` varchar(120) NOT NULL,
   `telefono` int(20) NOT NULL,
-  `correo` varchar(40) NOT NULL
+  `correo` varchar(40) NOT NULL,
+  `dia` date NOT NULL,
+  `dni` int (15)NOT NULL,
+  `hora` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `solicitud_turno`
 --
 
-INSERT INTO `solicitud_turno` (`id`, `nombre`, `localidad`, `descripcion`, `telefono`, `correo`) VALUES
-(1, 'jose', 'Olivos', 'vacunarme contra el covid', 12141241, 'dante@gmail.com'),
-(2, 'jose', 'Olivos', 'vacunarme contra el covid', 12141241, 'dante@gmail.com'),
-(3, '', 'Boulogne', '', 0, ''),
-(4, '', 'Boulogne', '', 0, ''),
-(5, '', 'Boulogne', '', 0, ''),
-(6, '', 'Boulogne', '', 0, ''),
-(7, '', 'Boulogne', '', 0, ''),
-(8, '', 'Boulogne', '', 0, ''),
-(9, '', 'Boulogne', '', 0, ''),
-(10, '', 'Boulogne', '', 0, ''),
-(11, '', 'Boulogne', '', 0, ''),
-(12, '', 'Boulogne', '', 0, ''),
-(13, '', 'Boulogne', '', 0, ''),
-(14, 'maria', 'vicentelopez', 'vacunarme contra el covid', 12141241, 'dante@gmail.com'),
-(15, 'fran', 'Boulogne', 'vacunarme contra el covid', 12141241, 'anabarrio@gmal.com'),
-(16, 'milo j', 'Villa Adelina', 'vacunarme para la gripe', 124142121, 'miloj.@gmail.com');
+INSERT INTO `solicitud_turno` (`id`, `nombre`, `localidad`, `descripcion`, `telefono`, `correo`, `dia`, `hora`) VALUES
+(1, 'jose', 'Olivos', 'vacunarme contra el covid', 12141241, 'dante@gmail.com', '2023-11-17', '23:08:00'),
+(2, 'jose', 'Olivos', 'vacunarme contra el covid', 12141241, 'dante@gmail.com', '0000-00-00', '00:00:00'),
+(3, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(4, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(5, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(6, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(7, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(8, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(9, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(10, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(11, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(12, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(13, '', 'Boulogne', '', 0, '', '0000-00-00', '00:00:00'),
+(14, 'maria', 'vicentelopez', 'vacunarme contra el covid', 12141241, 'dante@gmail.com', '0000-00-00', '00:00:00'),
+(15, 'fran', 'Boulogne', 'vacunarme contra el covid', 12141241, 'anabarrio@gmal.com', '0000-00-00', '00:00:00'),
+(16, 'milo j', 'Villa Adelina', 'vacunarme para la gripe', 124142121, 'miloj.@gmail.com', '0000-00-00', '00:00:00');
 
 --
 -- Índices para tablas volcadas
