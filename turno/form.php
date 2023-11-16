@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formuario</title>
+    <title>formulario</title>
     <link rel="stylesheet" href="css2/estilo.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@1&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../pagina prin/img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
@@ -14,7 +14,7 @@
 <body>
 
     <main>
-    
+
         <form action="" method="post" id="form">
             <div class="cont_back">
                 <a href="../pagina prin/index.php">
@@ -22,14 +22,14 @@
                         arrow_back
                     </span>
                 </a>
-                <h1>Solicitar turno medico</h1>
+                <h1>Solicitar turno médico</h1>
             </div>
 
             <input type="text" placeholder="Nombre y apellido" name="nombre" class="enviar">
-            <input type="text" placeholder="Dni" name="dni" class="enviar">
-            <input type="text" class="solicitud" placeholder="solicitud" name="solicitud">
-            <input type="text" placeholder="Telefono" name="telefono">
-            <input type="email" placeholder="Correo electronico" name="email">
+            <input type="text" placeholder="DNI" name="dni" class="enviar">
+            <input type="text" class="solicitud" placeholder="Solicitud" name="solicitud">
+            <input type="text" placeholder="Teléfono" name="telefono">
+            <input type="email" placeholder="Correo electrónico" name="email">
             <select id="localidad" name="localidad" class="selec">
                 <option value="Boulogne">Boulogne</option>
                 <option value="Carapachay">Carapachay</option>
@@ -38,7 +38,7 @@
                 <option value="Munro">Munro</option>
                 <option value="Florida">Florida</option>
             </select>
-            <input type="date" placeholder="Fecha Del turno" name="fecha">
+            <input type="date" placeholder="Fecha del turno" name="fecha">
             <input type="time" placeholder="Horario del turno" name="hora">
             <button name="btn" class="btn_enviar">Enviar solicitud</button>
             <?php
@@ -73,27 +73,27 @@
                         // Vincula los parámetros y ejecuta la consulta
                         $stmt->bind_param("ssssssss", $nombre, $localidad, $solicitud, $telefono, $email, $dni , $fecha , $hora);
                         if ($stmt->execute()) {
-                            $mensaje = "Turno medico sacado correctamente";
+                            $mensaje = "Turno médico solicitado";
                             echo ("<h3>$mensaje</h3>");
                             if ($localidad == "Boulogne" || $localidad == "Florida") {
             
-                                echo ("<h3>tendra que ir al Hospiatl Bernardo Houssay</h3>");
+                                echo ("<h3>Tendrá que ir al Hospital Bernardo Houssay</h3>");
                                 echo ("<h4>Pres. Hipólito Yrigoyen 1757, Florida</h4>");
-                                echo ("<h4>Días y horarios:Lunes a viernes de 7.30 a 16.45hs y sábados de 8 a 14 hs.</h4>");
+                                echo ("<h4>Días y horarios: Lunes a viernes de 7.30 a 16.45hs y sábados de 8 a 14 hs.</h4>");
                             }
             
                             if ($localidad == "Carapachay") {
-                                echo ("<h3>tendra que ir a URI BURMAN</h3>");
-                                echo ("<h4> Ituzaingó 5725,Carapachay </h4>");
+                                echo ("<h3>Tendrá que ir a URI BURMAN</h3>");
+                                echo ("<h4> Ituzaingó 5725, Carapachay </h4>");
                                 echo ("<h4>Días y horarios: Lunes a sábados de 8 a 18 hs</h4>");
                             }
                             if ($localidad == "Villa Adelina") {
-                                echo ("<h3>tendra que ir a CAPS SCALISE </h3>");
+                                echo ("<h3>Tendrá que ir a CAPS SCALISE </h3>");
                                 echo ("<h4> Cajaraville 4042 Villa Adelina</h4>");
                                 echo ("<h4>Días y horarios: Lunes a viernes de 8 a 12 hs y de 13 a 15 hs</h4>");
                             }
                             if ($localidad == "Munro") {
-                                echo ("<h3>tendra que ir a CAPS BARREIRO AGUIRRE</h3>");
+                                echo ("<h3>Tendrá que ir a CAPS BARREIRO AGUIRRE</h3>");
                                 echo ("<h4> Sargento Baigorria 2461,Munro </h4>");
                                 echo ("<h4>Días y horarios: Lunes a viernes de 8:00 a 15:00 hs</h4>");
                             }
@@ -109,7 +109,7 @@
                         // Cierra la sentencia preparada
                         $stmt->close();
                     } else {
-                        $mensaje = "Error en la preparación de la sentencia: " . $conexionDatos->error;
+                        $mensaje = "Error en la solicitud de el turno.Intentelo mas tarde." . $conexionDatos->error;
                     }
                 }
             }

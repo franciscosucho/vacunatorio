@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="shortcut icon" href="https://citymis.co/custom/vicentelopez/public/_css/logo150x550.png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.vicentelopez.gov.ar/apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Vacunatorio</title>
 </head>
@@ -40,7 +40,7 @@
                     <span class="material-symbols-outlined">
                         edit_note
                     </span>
-                    <a href="../modificar turno/modificar.php" id="modificar_turno">Modificar turno</a>
+                    <a href="../modificar turno/modificar.php" id="modificar_turno">Modificar y ver turnos</a>
                 </div>
 
 

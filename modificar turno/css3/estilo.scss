@@ -164,7 +164,7 @@ body {
             }
         }
     }
-
+    
     main {
         margin-top: 20vh;
         height: 80vh;
@@ -172,7 +172,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-
+        margin-bottom: 5%;
         section {
             width: 40%;
             background-color: rgba(41, 72, 163, 0.582);
@@ -196,7 +196,26 @@ body {
                     font-size: 3rem;
                     border-bottom: 4px solid white;
                 }
-
+                .cont_texto{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    gap: 10px;
+                    width: 100%;
+                    h3 {
+                        display: inline;
+                        color: white;
+                        font-size: 2.7rem;
+                        border-bottom: 4px solid white;
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    }
+                    p{
+                        color: rgb(224, 224, 224);
+                        font-size: 2.4rem;
+                        padding-bottom: 4px;
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    }
+                }
                 input {
                     text-align: center;
                     width: 60%;
@@ -243,6 +262,11 @@ body {
                     align-items: center;
                     height: 50%;
                     width: 100%;
+                    padding: 0px 20px;
+                    p{
+                        font-size: 1em;
+                        color: #fcfcfc;
+                    }
                     .cont_lista {
                         
                         border: 1px solid rgba(128, 128, 128, 0.39);
@@ -266,7 +290,6 @@ body {
                             border-right: 1px solid rgba(128, 128, 128, 0.39);
 
                         }
-
                         .vacuna-name {
                             border-right: 1px solid rgba(128, 128, 128, 0.39);
                             display: flex;
@@ -276,26 +299,18 @@ body {
                             height: 60px;
                             width: 100%;
                             color: rgb(68, 68, 68);
-                            background-color: rgba(10, 99, 129, 0.548);
-                        }
-
-                        .rojo {
-                            font-weight: 600;
-                            color: rgb(252, 42, 42);
-                        }
-
-                        .amarillo {
-                            font-weight: 500;
-                            color: rgb(255, 255, 38)
-                        }
-
-                        .verde {
-                            font-weight: 600;
-                            color: rgb(85, 231, 56)
-                        }
-
-                        .par {
                             background-color: rgba(255, 255, 255, 0.644);
+                            border-radius: 0px;
+                            border: none;
+                                
+                        }
+                        input{
+                            box-shadow: none;
+                            font-size: 1em;
+                        }
+                        .par {
+                            background-color: rgba(10, 99, 129, 0.548);
+                           
                         }
                     }
                 }

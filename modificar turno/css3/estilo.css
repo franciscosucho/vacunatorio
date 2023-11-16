@@ -150,6 +150,7 @@ body main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 5%;
 }
 body main section {
   width: 40%;
@@ -174,6 +175,26 @@ body main section .form h3 {
   color: white;
   font-size: 3rem;
   border-bottom: 4px solid white;
+}
+body main section .form .cont_texto {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+body main section .form .cont_texto h3 {
+  display: inline;
+  color: white;
+  font-size: 2.7rem;
+  border-bottom: 4px solid white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body main section .form .cont_texto p {
+  color: rgb(224, 224, 224);
+  font-size: 2.4rem;
+  padding-bottom: 4px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 body main section .form input {
   text-align: center;
@@ -216,6 +237,11 @@ body main section .form .cont_listas {
   align-items: center;
   height: 50%;
   width: 100%;
+  padding: 0px 20px;
+}
+body main section .form .cont_listas p {
+  font-size: 1em;
+  color: #fcfcfc;
 }
 body main section .form .cont_listas .cont_lista {
   border: 1px solid rgba(128, 128, 128, 0.39);
@@ -248,20 +274,14 @@ body main section .form .cont_listas .cont_lista .vacuna-name {
   height: 60px;
   width: 100%;
   color: rgb(68, 68, 68);
-  background-color: rgba(10, 99, 129, 0.548);
+  background-color: rgba(255, 255, 255, 0.644);
+  border-radius: 0px;
+  border: none;
 }
-body main section .form .cont_listas .cont_lista .rojo {
-  font-weight: 600;
-  color: rgb(252, 42, 42);
-}
-body main section .form .cont_listas .cont_lista .amarillo {
-  font-weight: 500;
-  color: rgb(255, 255, 38);
-}
-body main section .form .cont_listas .cont_lista .verde {
-  font-weight: 600;
-  color: rgb(85, 231, 56);
+body main section .form .cont_listas .cont_lista input {
+  box-shadow: none;
+  font-size: 1em;
 }
 body main section .form .cont_listas .cont_lista .par {
-  background-color: rgba(255, 255, 255, 0.644);
+  background-color: rgba(10, 99, 129, 0.548);
 }/*# sourceMappingURL=estilo.css.map */
