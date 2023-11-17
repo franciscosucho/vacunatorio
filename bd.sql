@@ -56,35 +56,7 @@ INSERT INTO `clinica` (`id_clinica`, `nombre`, `direccion`, `telefono`, `horario
 -- Estructura de tabla para la tabla `empleado`
 --
 
-CREATE TABLE `empleado` (
-  `id_empleado` int(11) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
-  `apellido` varchar(30) NOT NULL,
-  `contacto` varchar(30) NOT NULL,
-  `cargo` varchar(30) NOT NULL,
-  `clinica` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `empleado`
---
-
-INSERT INTO `empleado` (`id_empleado`, `nombre`, `apellido`, `contacto`, `cargo`, `clinica`) VALUES
-(1, 'Juan', 'Pérez', 'jperez@email.com', 'Médico', 1),
-(2, 'María', 'López', 'mlopez@email.com', 'Enfermero', 2),
-(3, 'Pedro', 'García', 'pgarcia@email.com', 'Administrativo', 3),
-(4, 'Ana', 'Rodríguez', 'arodriguez@email.com', 'Médico', 4),
-(5, 'Luis', 'Martínez', 'lmartinez@email.com', 'Enfermero', 5),
-(6, 'Laura', 'Sánchez', 'lsanchez@email.com', 'Administrativo', 6),
-(7, 'Carlos', 'Ramírez', 'cramirez@email.com', 'Médico', 7),
-(8, 'Sofía', 'Torres', 'storres@email.com', 'Enfermero', 8),
-(9, 'Diego', 'González', 'dgonzalez@email.com', 'Administrativo', 9),
-(10, 'Valentina', 'Pérez', 'vperez@email.com', 'Médico', 10),
-(11, 'Mateo', 'López', 'mlopez2@email.com', 'Enfermero', 11),
-(12, 'Camila', 'García', 'cgarcia@email.com', 'Administrativo', 12),
-(13, 'Andrés', 'Rodríguez', 'arodriguez2@email.com', 'Médico', 13),
-(14, 'Isabella', 'Martínez', 'imartinez@email.com', 'Enfermero', 14),
-(15, 'Lucas', 'Sánchez', 'lsanchez2@email.com', 'Administrativo', 15);
 
 -- --------------------------------------------------------
 
@@ -194,44 +166,8 @@ INSERT INTO `inventario` (`id_producto`, `nombre`, `fabricante`, `stock`, `efect
 (29, 'eumococo Conjugada (Neumo 11)', 'bayern', 100, '10', '3 Meses');
 
 -- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `jornada_laboral`
---
-
-CREATE TABLE `jornada_laboral` (
-  `dia` date NOT NULL,
-  `horario_entrada` time NOT NULL,
-  `horario_salida` time NOT NULL,
-  `empleado` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `jornada_laboral`
---
-
-INSERT INTO `jornada_laboral` (`dia`, `horario_entrada`, `horario_salida`, `empleado`) VALUES
-('2023-09-08', '08:00:00', '16:00:00', 1),
-('2023-09-09', '09:00:00', '17:00:00', 2),
-('2023-09-10', '07:30:00', '15:30:00', 3),
-('2023-09-11', '08:30:00', '16:30:00', 4),
-('2023-09-12', '07:00:00', '15:00:00', 5),
-('2023-09-13', '09:30:00', '17:30:00', 6),
-('2023-09-14', '08:15:00', '16:15:00', 7),
-('2023-09-15', '09:15:00', '17:15:00', 8),
-('2023-09-16', '08:45:00', '16:45:00', 9),
-('2023-09-17', '07:45:00', '15:45:00', 10),
-('2023-09-18', '09:45:00', '17:45:00', 11),
-('2023-09-19', '08:20:00', '16:20:00', 12),
-('2023-09-20', '09:20:00', '17:20:00', 13),
-('2023-09-21', '07:20:00', '15:20:00', 14),
-('2023-09-22', '08:50:00', '16:50:00', 15);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `pacientes`
---
+
 
 CREATE TABLE `pacientes` (
   `dni` int(11) NOT NULL,
@@ -241,7 +177,6 @@ CREATE TABLE `pacientes` (
   `fecha_nac` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
 -- Volcado de datos para la tabla `pacientes`
 --
 
@@ -258,31 +193,6 @@ INSERT INTO `pacientes` (`dni`, `nombre`, `apellido`, `contacto`, `fecha_nac`) V
 (8901234, 'Sofía', 'Torres', 'sofia@email.com', '1991-12-01'),
 (9876543, 'Luis', 'Martínez', 'luis@email.com', '1995-11-28');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `registro`
---
-
-CREATE TABLE `registro` (
-  `id_registro` int(11) NOT NULL,
-  `fecha` date NOT NULL,
-  `horario` time NOT NULL,
-  `empleado` int(11) NOT NULL,
-  `id_vacuna` int(11) NOT NULL,
-  `paciente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `registro`
---
-
-INSERT INTO `registro` (`id_registro`, `fecha`, `horario`, `empleado`, `id_vacuna`, `paciente`) VALUES
-(1, '2023-09-14', '26:36:59', 5, 1, 4634635),
-(2, '2023-09-08', '08:00:00', 1, 5, 1237890),
-(3, '2023-09-09', '09:15:00', 2, 2, 2345678),
-(4, '2023-09-10', '10:30:00', 3, 3, 3456789),
-(5, '2023-09-11', '11:45:00', 4, 4, 4567890);
 
 -- --------------------------------------------------------
 
@@ -335,11 +245,8 @@ ALTER TABLE `clinica`
   ADD PRIMARY KEY (`id_clinica`);
 
 --
--- Indices de la tabla `empleado`
---
-ALTER TABLE `empleado`
-  ADD PRIMARY KEY (`id_empleado`),
-  ADD UNIQUE KEY `clinica` (`clinica`);
+
+
 
 --
 -- Indices de la tabla `historial_vacunas`
@@ -364,26 +271,13 @@ ALTER TABLE `inventario`
 --
 -- Indices de la tabla `jornada_laboral`
 --
-ALTER TABLE `jornada_laboral`
-  ADD UNIQUE KEY `empleado` (`empleado`);
 
---
--- Indices de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
   ADD PRIMARY KEY (`dni`);
 
 --
--- Indices de la tabla `registro`
---
-ALTER TABLE `registro`
-  ADD PRIMARY KEY (`id_registro`),
-  ADD UNIQUE KEY `paciente` (`paciente`),
-  ADD KEY `empleado` (`empleado`),
-  ADD KEY `id_vacuna` (`id_vacuna`);
 
---
--- Indices de la tabla `solicitud_turno`
 --
 ALTER TABLE `solicitud_turno`
   ADD PRIMARY KEY (`id`);
@@ -425,8 +319,6 @@ ALTER TABLE `pacientes`
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
-ALTER TABLE `registro`
-  MODIFY `id_registro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitud_turno`
@@ -441,10 +333,7 @@ ALTER TABLE `solicitud_turno`
 --
 -- Filtros para la tabla `empleado`
 --
-ALTER TABLE `empleado`
-  ADD CONSTRAINT `empleado_ibfk_1` FOREIGN KEY (`clinica`) REFERENCES `clinica` (`id_clinica`);
 
---
 -- Filtros para la tabla `historial_vacunas`
 --
 ALTER TABLE `historial_vacunas`
@@ -456,17 +345,3 @@ ALTER TABLE `historial_vacunas`
 ALTER TABLE `historia_clinica`
   ADD CONSTRAINT `historia_clinica_ibfk_1` FOREIGN KEY (`paciente`) REFERENCES `pacientes` (`dni`);
 
---
--- Filtros para la tabla `jornada_laboral`
---
-ALTER TABLE `jornada_laboral`
-  ADD CONSTRAINT `jornada_laboral_ibfk_1` FOREIGN KEY (`empleado`) REFERENCES `empleado` (`id_empleado`);
-
---
--- Filtros para la tabla `registro`
---
-ALTER TABLE `registro`
-  ADD CONSTRAINT `registro_ibfk_1` FOREIGN KEY (`paciente`) REFERENCES `pacientes` (`dni`),
-  ADD CONSTRAINT `registro_ibfk_2` FOREIGN KEY (`empleado`) REFERENCES `empleado` (`id_empleado`),
-  ADD CONSTRAINT `registro_ibfk_3` FOREIGN KEY (`id_vacuna`) REFERENCES `inventario` (`id_producto`);
-COMMIT;
