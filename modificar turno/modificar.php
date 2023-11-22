@@ -22,7 +22,6 @@
                 <a href="#sec_info" class="ver_info">Información sobre las vacunas </a>
                 <a class="ver_img">Ubicaciones de vacunatorios</a>
                 <a class="ver_horarios">Horarios de Vacunación</a>
-                <a class="ver_horarios">Info vacunación</a>
             </ul>
             <div class="cont_menu">
                 <h3>Menú de usuario</h3>
@@ -96,9 +95,14 @@
                             lista("descripcion",$nombre,$dni);
                             }
                             else{
-                            echo("<div class='cont_listas'>");
-                            echo("<p>Usted no tiene ningún turno previo.</p>");
-                             }
+                                echo("<div class='cont_texto'> 
+                                <p>Usted no tiene ningún turno previo.</p>
+                                <a href='../turno/form.php'>Desea solicitar un turno medico?</a>
+                                </div>");
+                                echo("<div class='cont_listas'>");
+
+                                
+                            }
                         
                             
                          
@@ -223,7 +227,7 @@
                         } elseif ($opcion == "hora") {
                             echo '<input type="time" name="input_hora" class="vacuna-name par" value="'.$vacuna['hora'].'">';
                         } elseif ($opcion == "descripcion") {
-                            echo '<input type="text" name="input_desc" class="vacuna-name par" value="'.$vacuna['descripcion'].'">';
+                            echo '<input type="area" name="input_desc" class="vacuna-name par" value="'.$vacuna['descripcion'].'">';
                         }
                          elseif ($opcion == "editar") {
                             echo ('<button type="submit" name="btn_editar" class="vacuna-name par" value='. $vacuna['id'] .'>
@@ -245,7 +249,7 @@
                         } elseif ($opcion == "hora") {
                             echo '<input type="time" name="input_hora" class="vacuna-name" value="'.$vacuna['hora'].'">';
                         } elseif ($opcion == "descripcion") {
-                            echo '<input type="text" name="input_desc" class="vacuna-name" value="'.$vacuna['descripcion'].'">';
+                            echo '<input type="area" name="input_desc" class="vacuna-name" value="'.$vacuna['descripcion'].'">';
                         }
                         elseif ($opcion == "editar") {
                             echo ('<button type="submit" name="btn_editar" class="vacuna-name " value='. $vacuna['id'] .'>
@@ -272,6 +276,34 @@
     }
    
     ?>
+    <section class="sub_footer">
+
+
+<div class="cont_telefonos">
+    <div class="cont_telefono">
+        <h4>ATENCIÓN TELEFÓNICA 24HS.
+            GOBIERNO EN LÍNEA</h4>
+        <h2>148</h2>
+    </div>
+    <div class="cont_telefono">
+        <h3>
+            CORONAVIRUS
+            COVID-19</h3>
+    </div>
+    <div class="cont_telefono">
+        <h3>
+            MINISTERIO
+            DE SALUD</h3>
+    </div>
+</div>
+<div class="cont_img">
+    <img src="../pagina prin/img/imagen_footer2.png" alt="">
+</div>
+</section>
+</main>
+<footer>
+<div class="back"></div>
+</footer>
 </body>
 
 </html>

@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Vacunatorio</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=panchang@700&f[]=gambarino@400&f[]=synonym@400&f[]=amulya@700&f[]=switzer@400&f[]=boska@701&f[]=rosaline@400&f[]=britney@400,700&f[]=satoshi@500&f[]=author@500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -21,9 +23,8 @@
             <h1>Vacunatorio</h1>
             <ul>
                 <a href="#sec_info"  class="ver_info">Información sobre las vacunas </a>
-                <a class="ver_img">Ubicaciones de vacunatorios</a>
-                <a class="ver_horarios">Horarios de Vacunación</a>
-                <a class="ver_horarios">Info vacunación</a>
+                <a href="#sec_img"  class="ver_img">Ubicaciones de vacunatorios</a>
+                <a href="#sec_horarios"  class="ver_horarios">Horarios de Vacunación</a>
             </ul>
             <div class="cont_menu">
                 <h3>Menú de usuario</h3>
@@ -193,12 +194,47 @@ function ver_turnos($opcion){
             ?>
 
         </section>
-        <section class="sec_img">
-            <h3>Ubicaciones de los vacunatorios.</h3>
-            <img src="vacunatorio.png" alt="Ubicaciones de vacunatorios">
+        <section class="sec_img" id="sec_img">
+            <h3>Ubicaciones de los vacunatorios</h3>
+            <div class="cont_ubi">
+            <a href="https://maps.app.goo.gl/eY2YtbVmqzfUKnXC8">
+                <div class="direciones_vacu">
+                   
+                        <img src="https://images.vexels.com/media/users/3/141916/isolated/preview/dcd10d362e49a3c161379047a940ba7d-icono-de-trazo-de-pin-de-ubicacion.png" alt="">
+                    <h4>CAPS ILLIA</h4>
+                    <P>SAN LORENZO 3522</P>
+                    <p>OLIVOS</p>
+                </div>
+            </a>
+            <a href="https://maps.app.goo.gl/D9zY76vHndjXPToHA">
+                <div class="direciones_vacu">
+                    <img src="https://images.vexels.com/media/users/3/141916/isolated/preview/dcd10d362e49a3c161379047a940ba7d-icono-de-trazo-de-pin-de-ubicacion.png" alt="">
+                    <h4>UAP MARCELINO </h4>
+                    <P>LAVALLE 1583</P>
+                    <p>FLORIDA</p>
+                </div>
+            </a>
+            <a href="https://maps.app.goo.gl/qKi1GbXWtFKKdsap9">
+                <div class="direciones_vacu">
+                    <img src="https://images.vexels.com/media/users/3/141916/isolated/preview/dcd10d362e49a3c161379047a940ba7d-icono-de-trazo-de-pin-de-ubicacion.png" alt="">
+                    <h4>CAPS LLOBERA</h4>
+                    <P>ESTADOS UNIDOS 314</P>
+                    <p>VILLA MARTELI</p>
+                </div>
+                </a>
+            <a href="https://maps.app.goo.gl/gX8P5M5qnm3BLZDk8">
+                <div class="direciones_vacu">
+                    <img src="https://images.vexels.com/media/users/3/141916/isolated/preview/dcd10d362e49a3c161379047a940ba7d-icono-de-trazo-de-pin-de-ubicacion.png" alt="">
+                    <h4>CENTRO ODONTOLÒGICO PAUL HARRIS</h4>
+                    <P>SGTO.CABRAL 2810</P>
+                    <p>MUNRO</p>
+                </div>
+            </a>
+
+            </div>
 
         </section>
-        <section class="sec_horarios">
+        <section class="sec_horarios" id="sec_horarios">
             <h3>Horarios de Vacunación.</h3>
 
             <?php

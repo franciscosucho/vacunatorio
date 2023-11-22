@@ -421,8 +421,7 @@ body main .sec_img {
   height: 30%;
   display: none;
   transition: all 0.2s;
-  cursor: pointer;
-  background-color: rgba(38, 63, 172, 0.356);
+  background-color: #9e2284;
 }
 body main .sec_img.active {
   display: flex;
@@ -431,12 +430,52 @@ body main .sec_img.active {
   flex-direction: column;
 }
 body main .sec_img h3 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 2.7em;
+  color: white;
+  text-align: center;
+  font-family: "Author", sans-serif;
+}
+body main .sec_img .cont_ubi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40% 40%;
+  grid-gap: 40px;
+  padding: 30px;
+}
+body main .sec_img .cont_ubi a {
+  margin-top: 30px;
+  all: unset;
+  height: auto;
+  width: auto;
+  padding: 30px;
+}
+body main .sec_img .cont_ubi a .direciones_vacu {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+}
+body main .sec_img .cont_ubi a .direciones_vacu h4 {
   font-size: 2em;
   color: white;
+  text-align: center;
 }
-body main .sec_img img {
-  height: 80%;
-  width: 80%;
+body main .sec_img .cont_ubi a .direciones_vacu p {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+body main .sec_img .cont_ubi a .direciones_vacu img {
+  height: 60%;
+  width: 60%;
+}
+body main .sec_img .cont_ubi a .direciones_vacu:hover {
+  background-color: #a12d88;
 }
 body main .sec_horarios {
   padding-top: 50px;

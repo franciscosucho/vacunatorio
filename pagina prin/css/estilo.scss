@@ -108,7 +108,8 @@ body {
 
                         box-shadow: 0 2px rgb(255, 255, 255);
                     }
-                    li{
+
+                    li {
                         list-style: none;
                         color: white;
                         text-decoration: none;
@@ -488,6 +489,8 @@ body {
             width: 60%;
             height: 30%;
             display: none;
+            transition: all .2s;
+            background-color: #9e2284;
 
             &.active {
                 display: flex;
@@ -496,18 +499,62 @@ body {
                 flex-direction: column;
             }
 
-            transition: all .2s;
-            cursor: pointer;
-            background-color: rgba(38, 63, 172, 0.356);
-
             h3 {
-                font-size: 2em;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                font-size: 2.7em;
                 color: white;
+                text-align: center;
+                font-family: 'Author', sans-serif;
             }
 
-            img {
-                height: 80%;
-                width: 80%;
+            .cont_ubi {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 40% 40%;
+                grid-gap: 40px;
+                padding: 30px;
+
+                a {
+                    margin-top: 30px;
+                    all: unset;
+                    height: auto;
+                    width: auto;
+                    padding: 30px;
+                    .direciones_vacu {
+                        cursor: pointer;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 10px;
+                        transition: all .2s ease-in-out;
+
+                        h4 {
+                            font-size: 2em;
+                            color: white;
+                            text-align: center;
+                        }
+
+                        p {
+                            font-size: 1.4em;
+                            font-weight: bold;
+                        }
+
+
+                        img {
+                            height: 60%;
+                            width: 60%;
+                        }
+
+
+                        &:hover {
+                            background-color: #a12d88;
+                        }
+                    }
+                }
+
             }
         }
 
